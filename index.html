@@ -1,10 +1,15 @@
 <!DOCTYPE html>
-<html lang="cs">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ARENIX.app | Veřejné podmínky používání</title>
+  <title>ARENIX.app | Public Terms of Use</title>
+  <meta name="description" content="Public Core Arena Terms for ARENIX.app Partners, creators, community leaders and their members." />
   <meta name="robots" content="noindex, nofollow" />
+  <link rel="alternate" hreflang="en" href="https://arenix.app/terms.html" />
+  <link rel="alternate" hreflang="cs" href="https://arenix.app/cs/terms.html" />
+  <link rel="alternate" hreflang="de" href="https://arenix.app/de/terms.html" />
+  <link rel="alternate" hreflang="x-default" href="https://arenix.app/terms.html" />
   <style>
     :root {
       --bg-deep: #07150f;
@@ -441,13 +446,21 @@
       }
     }
 
+    /* === LANGUAGE SWITCHER PATCH === */
+    .terms-actions{display:flex;align-items:center;gap:12px;flex-wrap:wrap;justify-content:flex-end}
+    .lang-switch{display:inline-flex;align-items:center;gap:7px;border:1px solid rgba(214,173,85,.35);background:rgba(255,255,255,.40);border-radius:999px;padding:6px 8px}
+    .lang-switch a{color:var(--green-dark);text-decoration:none;font-size:12px;font-weight:900;letter-spacing:.06em;padding:5px 8px;border-radius:999px}
+    .lang-switch a.active{background:linear-gradient(135deg,var(--green),var(--green-dark));color:var(--gold-soft)}
+    .lang-switch a:hover{background:rgba(15,122,75,.10)}
+    @media(max-width:900px){.terms-actions{justify-content:flex-start}}
+
     @media print {
       body * {
         visibility: hidden !important;
       }
 
       body::after {
-        content: "Tisk této stránky není povolen.";
+        content: "Printing this page is not allowed.";
         visibility: visible !important;
         display: block;
         color: #111;
@@ -458,381 +471,264 @@
   </style>
 </head>
 <body oncontextmenu="return false">
-  <a href="#obsah" class="mobile-toc-float" aria-label="Zpět na obsah">↑ Obsah</a>
+  <a href="#obsah" class="mobile-toc-float" aria-label="↑ Contents">↑ Contents</a>
   <div class="watermark">ARENIX.app · Protected Terms View</div>
-
   <main class="page">
     <header class="hero">
       <div class="brand-row">
-        <div class="brand">
-          <div class="mark">A</div>
-          <div class="brand-text">
-            <strong>ARENIX.app</strong>
-            <span>Core Arena Terms</span>
-          </div>
-        </div>
-        <div class="badge"><span class="badge-dot"></span>Veřejné podmínky používání</div>
+        <div class="brand"><div class="mark">A</div><div class="brand-text"><strong>ARENIX.app</strong><span>Core Arena Terms</span></div></div>
+        <div class="terms-actions"><nav class="lang-switch" aria-label="Language switcher"><a class="active" href="/terms.html">EN</a><a href="/cs/terms.html">CZ</a><a class="" href="/de/terms.html">DE</a></nav><div class="badge"><span class="badge-dot"></span>Public Terms of Use</div></div>
       </div>
-
       <h1>Core Arena Terms</h1>
-      <p class="subtitle">Veřejné podmínky používání platformy ARENIX.app pro partnery, tvůrce, lídry komunit a jejich členy.</p>
-
-      <div class="meta-grid">
-        <div class="meta-card">
-          <span>Datum účinnosti</span>
-          <strong>03. MAY 2026</strong>
-        </div>
-        <div class="meta-card">
-          <span>Poskytovatel software</span>
-          <strong>AKO SOLUTIONS LLC, TRADE LICENCE 887171, DUBAI, SAE</strong>
-        </div>
-        <div class="meta-card">
-          <span>Webová stránka</span>
-          <strong>arenix.app a její podstránky</strong>
-        </div>
-      </div>
+      <p class="subtitle">Public Terms of Use of the ARENIX.app platform for Partners, creators, community leaders and their members.</p>
+      <div class="meta-grid"><div class="meta-card"><span>Effective date</span><strong>03. MAY 2026</strong></div><div class="meta-card"><span>Software Provider</span><strong>AKO SOLUTIONS LLC, TRADE LICENCE 887171, DUBAI, UAE</strong></div><div class="meta-card"><span>Website</span><strong>arenix.app and its subpages</strong></div></div>
     </header>
-
     <div class="layout">
-      <aside class="toc" id="obsah" aria-label="Obsah">
-        <h2>Obsah</h2>
-        <a href="#tldr">Shrnutí za 30 sekund</a>
-        <a href="#s1">1. Úvodní ustanovení</a>
-        <a href="#s2">2. Co je ARENIX</a>
-        <a href="#s3">3. Aréna jako hlavní produktový prvek</a>
-        <a href="#s4">4. Arena Credits</a>
-        <a href="#s5">5. Klíč Arény</a>
-        <a href="#s6">6. Co získává Partner</a>
-        <a href="#s7">7. Partnerská monetizační vrstva</a>
-        <a href="#s8">8. Partnerova komunita</a>
-        <a href="#s9">9. Zakázané použití Arény</a>
-        <a href="#s10">10. Žádné investiční služby</a>
-        <a href="#s11">11. Tržní data a výkonnostní zobrazení</a>
-        <a href="#s12">12. Compliance a ověřování</a>
-        <a href="#s13">13. Odpovědnost Partnera</a>
-        <a href="#s14">14. Odpovědnost uživatele</a>
-        <a href="#s15">15. Duševní vlastnictví a know-how</a>
-        <a href="#s16">16. Dostupnost platformy</a>
-        <a href="#s17">17. Třetí strany</a>
-        <a href="#s18">18. Omezení odpovědnosti</a>
-        <a href="#s19">19. Pozastavení nebo ukončení přístupu</a>
-        <a href="#s20">20. Zvláštní partnerské podmínky</a>
-        <a href="#s21">21. Změny podmínek</a>
-        <a href="#s22">22. Rozhodné právo a řešení sporů</a>
-        <a href="#s23">23. Kontakt</a>
-        <a href="#s24">24. Závěrečné prohlášení</a>
-      </aside>
-
-      <article class="content">
-        <section class="notice" id="tldr">
-          <h2>Shrnutí za 30 sekund</h2>
-          <p><strong>ARENIX.app</strong> je technologická infrastruktura pro partnery, tvůrce a lídry komunit, kteří chtějí proměnit pasivní publikum na aktivní a měřitelnou komunitu.</p>
-          <p>Partner vytváří vlastní Arénu, zve členy své komunity, nastavuje pravidla, sleduje aktivitu, pořadí a výkon komunity v jednom profesionálním prostředí.</p>
-          <p>Podstata Arény je v pravidlech. Partner může nastavit model, ve kterém se úspěch v Aréně neztrácí bez výsledku, ale podle předem určeného klíče se promítá zpět k nejlépe umístěné části komunity – například k Top 40 % leaderboardu.</p>
-          <p>V základní veřejné vrstvě se tento model zobrazuje výlučně přes Arena Credits. Arena Credits jsou interní prvek platformy, nemají peněžní hodnotu, nejsou vyplatitelné a nesmí být používány jako peníze nebo náhrada peněz.</p>
-          <p>Partnerská monetizační vrstva je samostatný a limitovaný krok pro schválené Partnery, kteří prokážou reálnou aktivitu, disciplínu a obchodní potenciál své komunity. Není automatickou součástí veřejné platformy a řídí se zvláštními podmínkami.</p>
-        </section>
-
-        <section class="section" id="s1">
-          <h2><span class="num">1</span>Úvodní ustanovení</h2>
-          <p>Tyto Veřejné podmínky používání upravují přístup a používání platformy <strong>ARENIX.app</strong>.</p>
-          <p>Platforma je určena pro partnery, tvůrce, mentory, edukátory, community lídry a jejich členy, kteří chtějí pracovat s komunitou přes digitální Arény, leaderboard, interní kredity, pravidla a výkonnostní zobrazení.</p>
-          <p>Používáním platformy uživatel potvrzuje, že si tyto podmínky přečetl, rozumí jim a souhlasí s nimi.</p>
-          <p>Pokud uživatel s těmito podmínkami nesouhlasí, nesmí platformu používat.</p>
-        </section>
-
-        <section class="section" id="s2">
-          <h2><span class="num">2</span>Co je ARENIX</h2>
-          <p><strong>ARENIX.app</strong> je softwarová platforma pro vytváření a správu digitálních Arén.</p>
-          <p>Aréna je online prostředí, ve kterém Partner organizuje aktivitu své komunity, nastavuje pravidla, sleduje výkon jednotlivých členů a pracuje s interními prvky platformy.</p>
-          <p>ARENIX umožňuje zejména:</p>
-          <ul>
-            <li>vytvořit vlastní Arénu;</li>
-            <li>pozvat členy vlastní komunity;</li>
-            <li>nastavit základní pravidla Arény;</li>
-            <li>používat Arena Credits;</li>
-            <li>zobrazovat leaderboard;</li>
-            <li>porovnávat výkonnost členů;</li>
-            <li>sledovat aktivitu komunity;</li>
-            <li>budovat důvěru přes transparentní pravidla;</li>
-            <li>požádat o přístup k vyšší partnerské vrstvě.</li>
-          </ul>
-          <p>ARENIX je technologické řešení.</p>
-          <p>ARENIX není broker, burza, investiční platforma, správce majetku, platební instituce, kasino, gambling operátor ani poskytovatel investičního nebo finančního poradenství.</p>
-        </section>
-
-        <section class="section" id="s3">
-          <h2><span class="num">3</span>Aréna jako hlavní produktový prvek</h2>
-          <p>Aréna je základní prostor platformy.</p>
-          <p>Partner přes Arénu vytváří místo, kde jeho komunita vidí pravidla, pořadí, výkon, aktivitu a výsledky v jednom přehledném prostředí.</p>
-          <p>Aréna může pracovat s tržními daty, cenovým vývojem, rozhodnutími uživatelů, interními kredity, výkonnostním skóre a leaderboardem.</p>
-          <p>Cílem Arény je ukázat Partnerovi i jeho komunitě, jak vypadá organizovaný model, ve kterém komunita není pouze pasivním publikem, ale aktivním prostředím s jasnými pravidly, měřitelným výkonem a viditelnou hodnotou.</p>
-        </section>
-
-        <section class="section" id="s4">
+      <aside class="toc" id="obsah" aria-label="Contents"><h2>Contents</h2><a href="#tldr">30-second summary</a><a href="#s1">1. Introductory provisions</a><a href="#s2">2. What ARENIX is</a><a href="#s3">3. The Arena as the core product element</a><a href="#s4">4. Arena Credits</a><a href="#s5">5. The Arena Key</a><a href="#s6">6. What the Partner receives</a><a href="#s7">7. Partner Monetization Layer</a><a href="#s8">8. Partner's community</a><a href="#s9">9. Prohibited use of the Arena</a><a href="#s10">10. No investment services</a><a href="#s11">11. Market data and performance display</a><a href="#s12">12. Compliance and verification</a><a href="#s13">13. Partner responsibility</a><a href="#s14">14. User responsibility</a><a href="#s15">15. Intellectual property and know-how</a><a href="#s16">16. Availability of the platform</a><a href="#s17">17. Third parties</a><a href="#s18">18. Limitation of liability</a><a href="#s19">19. Suspension or termination of access</a><a href="#s20">20. Special Partner Terms</a><a href="#s21">21. Changes to the Terms</a><a href="#s22">22. Governing law and dispute resolution</a><a href="#s23">23. Contact</a><a href="#s24">24. Final statement</a></aside>
+      <article class="content"><section class="notice" id="tldr">
+          <h2>30-second summary</h2>
+          <p><strong>ARENIX.app</strong> is a technology infrastructure for Partners, creators and community leaders who want to turn a passive audience into an active and measurable community.</p>
+          <p>A Partner creates their own Arena, invites members of their community, sets rules, and monitors activity, ranking and community performance in one professional environment.</p>
+          <p>The essence of the Arena is the rules. A Partner may set a model in which success in the Arena does not disappear without result, but is reflected back to the best-ranked part of the community according to a predefined key – for example to the Top 40% of the leaderboard.</p>
+          <p>In the basic public layer, this model is displayed exclusively through Arena Credits. Arena Credits are an internal platform element, have no monetary value, are not redeemable and must not be used as money or a substitute for money.</p>
+          <p>The Partner Monetization Layer is a separate and limited step for approved Partners who demonstrate real activity, discipline and commercial potential in their community. It is not an automatic part of the public platform and is governed by separate terms.</p>
+        </section><section class="section" id="s1">
+          <h2><span class="num">1</span>Introductory provisions</h2>
+          <p>These Public Terms of Use govern access to and use of the <strong>ARENIX.app</strong> platform.</p>
+          <p>The platform is intended for Partners, creators, mentors, educators, community leaders and their members who want to work with a community through digital Arenas, a leaderboard, internal credits, rules and performance displays.</p>
+          <p>By using the platform, the user confirms that they have read, understood and agree to these Terms.</p>
+          <p>If a user does not agree with these Terms, they must not use the platform.</p>
+        </section><section class="section" id="s2">
+          <h2><span class="num">2</span>What ARENIX is</h2>
+          <p><strong>ARENIX.app</strong> is a software platform for creating and managing digital Arenas.</p>
+          <p>An Arena is an online environment in which a Partner organizes the activity of their community, sets rules, tracks the performance of individual members and works with internal platform elements.</p>
+          <p>ARENIX enables in particular:</p><ul>
+<li>creating a dedicated Arena;</li>
+<li>inviting members of the Partner's own community;</li>
+<li>setting basic Arena rules;</li>
+<li>using Arena Credits;</li>
+<li>displaying a leaderboard;</li>
+<li>comparing member performance;</li>
+<li>monitoring community activity;</li>
+<li>building trust through transparent rules;</li>
+<li>applying for access to a higher Partner layer.</li>
+</ul>
+          <p>ARENIX is a technology solution.</p>
+          <p>ARENIX is not a broker, exchange, investment platform, asset manager, payment institution, casino, gambling operator or provider of investment or financial advice.</p>
+        </section><section class="section" id="s3">
+          <h2><span class="num">3</span>The Arena as the core product element</h2>
+          <p>The Arena is the core space of the platform.</p>
+          <p>Through the Arena, the Partner creates a place where their community can see rules, ranking, performance, activity and results in one clear environment.</p>
+          <p>The Arena may work with market data, price movement, user decisions, internal credits, performance score and a leaderboard.</p>
+          <p>The purpose of the Arena is to show both the Partner and their community what an organized model looks like, where the community is not merely a passive audience but an active environment with clear rules, measurable performance and visible value.</p>
+        </section><section class="section" id="s4">
           <h2><span class="num">4</span>Arena Credits</h2>
-          <p><strong>Arena Credits</strong> jsou interní prvek platformy. Používají se pro zobrazení aktivity, skóre, pořadí a výkonnostního modelu v Aréně.</p>
-          <p>Arena Credits pomáhají Partnerovi a jeho komunitě pochopit mechaniku Arény bez toho, aby v základní veřejné vrstvě vznikal nárok na výplatu nebo finanční plnění.</p>
-          <p>Arena Credits:</p>
-          <ul>
-            <li>nemají peněžní hodnotu;</li>
-            <li>nejsou peníze;</li>
-            <li>nejsou elektronické peníze;</li>
-            <li>nejsou kryptoměna;</li>
-            <li>nejsou stablecoin;</li>
-            <li>nejsou cenný papír;</li>
-            <li>nejsou finanční nástroj;</li>
-            <li>nejsou vklad;</li>
-            <li>nejsou vyplatitelné;</li>
-            <li>nejsou převoditelné mimo platformu;</li>
-            <li>nezakládají nárok na zisk, výnos, odměnu, výplatu nebo investiční návratnost.</li>
-          </ul>
-          <p>Žádný uživatel nemá právo požadovat vyplacení, směnu, refundaci nebo jinou kompenzaci na základě Arena Credits.</p>
-        </section>
-
-        <section class="section" id="s5">
-          <h2><span class="num">5</span>Klíč Arény</h2>
-          <p>Každá Aréna může mít vlastní klíč pravidel.</p>
-          <p>Tento klíč určuje, jak se v Aréně zobrazují výsledky, pořadí, výkon a přiřazení Arena Credits.</p>
-          <p>Partner může nastavit pravidla tak, aby se Arena Credits přiřazovaly podle leaderboardu, výkonnostního skóre, aktivity nebo jiných parametrů dostupných v platformě.</p>
-          <p>Příkladem takového pravidla může být model, podle kterého nejlépe umístěná část leaderboardu, například Top 40 %, získá v rámci Arény zpět nebo dodatečně získá Arena Credits podle předem určeného klíče.</p>
-          <p>Klíč Arény je důvod, proč Aréna není pouze tabulka výsledků.</p>
-          <p>Účastníci vidí, že pravidla mají důsledek, pořadí má význam a aktivita v komunitě se promítá do viditelného výsledku.</p>
-          <p>Partner tak umí své komunitě ukázat model, ve kterém výkon, disciplína a účast nejsou pouze prázdná čísla, ale vytvářejí strukturovaný komunitní mechanismus.</p>
-          <p>Klíč Arény se v základní veřejné vrstvě vztahuje výlučně na Arena Credits.</p>
-          <p>Arena Credits nemají peněžní hodnotu a nezakládají žádný nárok na peníze, výplatu, zisk, výnos, odměnu, profit share, investiční návratnost nebo jinou majetkovou hodnotu.</p>
-          <p>Jakékoli použití Arena Credits jako náhrady peněz, zástupné měny nebo podkladu pro finanční vypořádání mimo platformu je zakázáno.</p>
-        </section>
-
-        <section class="section" id="s6">
-          <h2><span class="num">6</span>Co získává Partner</h2>
-          <p>Partner získává nástroj, přes který může svou komunitu organizovat, aktivovat a měřit.</p>
-          <p>ARENIX umožňuje Partnerovi vytvořit profesionální prostředí bez toho, aby musel sám budovat vlastní technickou infrastrukturu, leaderboard, kreditový model, pravidla Arény a uživatelské rozhraní.</p>
-          <p>Partner může používat Arénu zejména jako:</p>
-          <ul>
-            <li>vstupní bod pro nové členy komunity;</li>
-            <li>nástroj pro aktivaci existující komunity;</li>
-            <li>důkaz zájmu a aktivity publika;</li>
-            <li>způsob, jak ukázat komunitní model v praxi;</li>
-            <li>podklad pro posouzení, zda má komunita potenciál pro partnerskou monetizační vrstvu.</li>
-          </ul>
-          <p>Partner, který umí přivést členy své komunity, udržet jejich pozornost a vytvořit aktivitu, získává přes ARENIX infrastrukturu, která mu umožňuje ukázat hodnotu jeho komunity v číslech, ne pouze ve slovech.</p>
-          <p>Aréna dává Partnerovi jasný obraz o tom, zda jeho komunita pouze pasivně sleduje obsah, nebo je připravena aktivně reagovat, zapojovat se a fungovat podle pravidel.</p>
-          <p>Právě tento rozdíl je rozhodující. Komunita, která umí vytvořit aktivitu, disciplínu a měřitelný výkon, může být připravena na další úroveň spolupráce s ARENIX.</p>
-        </section>
-
-        <section class="section" id="s7">
-          <h2><span class="num">7</span>Partnerská monetizační vrstva</h2>
-          <p>ARENIX může pro vybrané Partnery poskytovat také <strong>partnerskou monetizační vrstvu</strong>.</p>
-          <p>Tato vrstva není součástí základní veřejné služby a není automaticky dostupná každému uživateli ani každému Partnerovi.</p>
-          <p>Přístup k partnerské monetizační vrstvě může být podmíněn zejména:</p>
-          <ul>
-            <li>individuálním schválením;</li>
-            <li>samostatnou partnerskou dohodou;</li>
-            <li>technickým nastavením;</li>
-            <li>interním posouzením;</li>
-            <li>compliance procesem;</li>
-            <li>splněním obchodních, právních nebo bezpečnostních požadavků určených Poskytovatelem.</li>
-          </ul>
-          <p>Žádné ustanovení těchto veřejných podmínek nelze vykládat tak, že Partnerovi nebo uživateli vzniká právní nárok na přístup k partnerské monetizační vrstvě.</p>
-          <p>Poskytovatel si vyhrazuje právo rozhodnout:</p>
-          <ul>
-            <li>kterému Partnerovi bude partnerská monetizační vrstva zpřístupněna;</li>
-            <li>v jakém rozsahu bude zpřístupněna;</li>
-            <li>za jakých podmínek bude zpřístupněna;</li>
-            <li>kdy bude zpřístupněna;</li>
-            <li>zda bude přístup pozastaven nebo ukončen.</li>
-          </ul>
-          <p>Základní Aréna ukazuje potenciál komunity.</p>
-          <p>Partnerská monetizační vrstva je další krok pro Partnery, kteří dokážou prokázat, že jejich komunita má aktivitu, důvěru, disciplínu a obchodní potenciál.</p>
-          <p>ARENIX tím odděluje běžné publikum od komunity, která je připravena pracovat na vyšší úrovni.</p>
-        </section>
-
-        <section class="section" id="s8">
-          <h2><span class="num">8</span>Partnerova komunita</h2>
-          <p>ARENIX je navržen tak, aby Partner mohl pracovat se svou vlastní komunitou.</p>
-          <p>Partner si buduje svůj vztah se svými členy. ARENIX poskytuje nástroj, rozhraní a infrastrukturu.</p>
-          <p>Poskytovatel automaticky nepřebírá Partnerovu databázi, neprodává ji, neobchoduje s ní a nepoužívá ji jako vlastní obchodní databázi, pokud není výslovně dohodnuto jinak nebo pokud to nevyžaduje zákon, bezpečnostní důvod, technické zabezpečení nebo compliance proces.</p>
-          <p>Partner je odpovědný za zákonnost svého vztahu s komunitou, za způsob zvaní členů, za vlastní marketingová tvrzení a za komunikaci mimo platformu.</p>
-        </section>
-
-        <section class="section" id="s9">
-          <h2><span class="num">9</span>Zakázané použití Arény</h2>
-          <p>Partner ani uživatel nesmí používat ARENIX způsobem, který poškozuje integritu platformy nebo mění její základní veřejnou vrstvu na neoficiální finanční mechanismus mimo platformu.</p>
-          <p>Zakázáno je zejména:</p>
-          <ul>
-            <li>používat Arena Credits jako peníze nebo zástupnou měnu;</li>
-            <li>slibovat výplaty na základě Arena Credits;</li>
-            <li>vyplácet odměny mimo platformu na základě leaderboardu;</li>
-            <li>vytvářet neoficiální finanční pooly mimo schválené prostředí;</li>
-            <li>prezentovat Arénu jako investiční příležitost;</li>
-            <li>slibovat zisk, výnos nebo garantovaný výsledek;</li>
-            <li>uvádět členy komunity v omyl o povaze platformy;</li>
-            <li>obcházet technická nebo právní omezení platformy;</li>
-            <li>kopírovat, napodobovat nebo neoprávněně využívat know-how platformy.</li>
-          </ul>
-          <p>Porušení této části může vést k okamžitému omezení nebo ukončení přístupu.</p>
-        </section>
-
-        <section class="section" id="s10">
-          <h2><span class="num">10</span>Žádné investiční služby</h2>
-          <p>ARENIX neposkytuje:</p>
-          <ul>
-            <li>investiční poradenství;</li>
-            <li>finanční poradenství;</li>
-            <li>brokerské služby;</li>
-            <li>správu majetku;</li>
-            <li>správu portfolia;</li>
-            <li>custody služby;</li>
-            <li>bankovní služby;</li>
-            <li>platební účty;</li>
-            <li>burzovní služby;</li>
-            <li>garanci zisku;</li>
-            <li>výnosové produkty;</li>
-            <li>kolektivní investování;</li>
-            <li>hazardní hry nebo kasinové služby.</li>
-          </ul>
-          <p>Uživatel nesmí interpretovat Arénu, leaderboard, Arena Credits nebo jakékoli výsledky v platformě jako investiční doporučení, finanční nabídku nebo garanci budoucího výsledku.</p>
-        </section>
-
-        <section class="section" id="s11">
-          <h2><span class="num">11</span>Tržní data a výkonnostní zobrazení</h2>
-          <p>Platforma může zobrazovat tržní data, cenový vývoj, výkonnostní metriky nebo jiné údaje relevantní pro fungování Arény.</p>
-          <p>Tyto údaje slouží pro fungování uživatelského prostředí, porovnání rozhodnutí a zobrazení výsledků podle pravidel Arény.</p>
-          <p>Poskytovatel negarantuje úplnost, přesnost, nepřetržitou dostupnost nebo vhodnost tržních dat pro konkrétní účel.</p>
-          <p>Žádné zobrazení dat v platformě nepředstavuje doporučení koupit, prodat, držet nebo obchodovat jakýkoli finanční nástroj, kryptoměnu, token, CFD, derivát nebo jiné aktivum.</p>
-        </section>
-
-        <section class="section" id="s12">
-          <h2><span class="num">12</span>Compliance a ověřování</h2>
-          <p>Poskytovatel si vyhrazuje právo vyžadovat ověření uživatele, Partnera, organizace, věku, technického přístupu, peněženky, lokality nebo jiných údajů, pokud je to potřebné pro ochranu platformy, splnění právních povinností, bezpečnostní posouzení nebo zpřístupnění partnerské monetizační vrstvy.</p>
-          <p>Ověření může být provedeno přímo nebo prostřednictvím třetí strany.</p>
-          <p>Skutečnost, že uživatel může používat základní veřejnou vrstvu bez dodatečného ověření, neznamená, že takové ověření nebude potřebné u jiných funkcí nebo v budoucnu.</p>
-        </section>
-
-        <section class="section" id="s13">
-          <h2><span class="num">13</span>Odpovědnost Partnera</h2>
-          <p>Partner odpovídá za to, že jeho používání platformy je zákonné, korektní a nezavádějící.</p>
-          <p>Partner nesmí vůči své komunitě tvrdit nebo naznačovat, že:</p>
-          <ul>
-            <li>ARENIX garantuje výplatu;</li>
-            <li>Arena Credits mají peněžní hodnotu;</li>
-            <li>výsledek v Aréně je garantovaný;</li>
-            <li>platforma poskytuje investiční službu;</li>
-            <li>účast v Aréně je finanční produkt;</li>
-            <li>Poskytovatel spravuje nebo drží prostředky uživatelů;</li>
-            <li>Partner má právo obcházet tyto podmínky přes vlastní dohody mimo platformu.</li>
-          </ul>
-          <p>Partner odpovídá za vlastní reklamu, vlastní komunikační kanály, vlastní sliby a vlastní vztahy se svou komunitou.</p>
-        </section>
-
-        <section class="section" id="s14">
-          <h2><span class="num">14</span>Odpovědnost uživatele</h2>
-          <p>Uživatel odpovídá za to, že platformu používá zákonně, bezpečně a v souladu s těmito podmínkami.</p>
-          <p>Uživatel nesmí:</p>
-          <ul>
-            <li>zneužívat platformu;</li>
-            <li>manipulovat leaderboard;</li>
-            <li>vytvářet falešné účty;</li>
-            <li>používat automatizované nástroje bez souhlasu;</li>
-            <li>poškozovat platformu;</li>
-            <li>obcházet pravidla Arény;</li>
-            <li>uvádět jiné uživatele v omyl;</li>
-            <li>používat platformu k podvodu, manipulaci nebo nezákonné činnosti.</li>
-          </ul>
-        </section>
-
-        <section class="section" id="s15">
-          <h2><span class="num">15</span>Duševní vlastnictví a know-how</h2>
-          <p>Platforma, její název, design, struktura, rozhraní, logika Arény, leaderboard, kreditový model, pravidla, software, dokumentace, obchodní model, technická řešení a související know-how jsou chráněny právy Poskytovatele nebo jeho licencorů.</p>
-          <p>Uživatel ani Partner nesmí bez předchozího písemného souhlasu Poskytovatele:</p>
-          <ul>
-            <li>kopírovat platformu;</li>
-            <li>napodobovat její obchodní nebo technický model;</li>
-            <li>zpětně analyzovat její logiku;</li>
-            <li>vytvářet odvozené produkty;</li>
-            <li>prodávat nebo licencovat přístup třetím osobám;</li>
-            <li>používat platformu k vytvoření konkurenčního řešení;</li>
-            <li>zneužít získané informace mimo účel, pro který mu byl přístup udělen.</li>
-          </ul>
-        </section>
-
-        <section class="section" id="s16">
-          <h2><span class="num">16</span>Dostupnost platformy</h2>
-          <p>Poskytovatel se snaží zajistit řádné fungování platformy, ale negarantuje její nepřetržitou dostupnost.</p>
-          <p>Platforma může být dočasně nedostupná z důvodu údržby, aktualizace, technické chyby, bezpečnostního incidentu, výpadku třetí strany nebo jiné okolnosti.</p>
-          <p>Poskytovatel může platformu nebo její části upravit, rozšířit, omezit, pozastavit nebo ukončit.</p>
-        </section>
-
-        <section class="section" id="s17">
-          <h2><span class="num">17</span>Třetí strany</h2>
-          <p>Platforma může využívat služby třetích stran, například hosting, analytiku, datové zdroje, bezpečnostní nástroje, compliance nástroje, komunikační nástroje nebo jiné technické služby.</p>
-          <p>Poskytovatel neodpovídá za výpadky, chyby, omezení nebo škody způsobené službami třetích stran, pokud kogentní právní předpisy nestanoví jinak.</p>
-        </section>
-
-        <section class="section" id="s18">
-          <h2><span class="num">18</span>Omezení odpovědnosti</h2>
-          <p>V maximálním rozsahu povoleném příslušným právem Poskytovatel neodpovídá za nepřímou škodu, ušlý zisk, ztrátu obchodní příležitosti, ztrátu dat, poškození reputace, výpadek služby, nesprávné použití platformy, jednání Partnera nebo používání platformy v rozporu s těmito podmínkami.</p>
-          <p>Nic v těchto podmínkách nevylučuje odpovědnost, kterou není možné podle příslušného práva vyloučit.</p>
-        </section>
-
-        <section class="section" id="s19">
-          <h2><span class="num">19</span>Pozastavení nebo ukončení přístupu</h2>
-          <p>Poskytovatel může omezit, pozastavit nebo ukončit přístup uživatele nebo Partnera, pokud dojde k porušení těchto podmínek nebo pokud Poskytovatel důvodně vyhodnotí právní, technické, bezpečnostní, reputační nebo obchodní riziko.</p>
-          <p>To platí zejména při:</p>
-          <ul>
-            <li>zneužití Arena Credits;</li>
-            <li>zavádějící komunikaci vůči komunitě;</li>
-            <li>obcházení pravidel platformy;</li>
-            <li>neoprávněném kopírování know-how;</li>
-            <li>manipulaci výsledků;</li>
-            <li>používání platformy k neoficiálnímu finančnímu vypořádání;</li>
-            <li>jednání, které může poškodit Poskytovatele, platformu nebo ostatní uživatele.</li>
-          </ul>
-        </section>
-
-        <section class="section" id="s20">
-          <h2><span class="num">20</span>Zvláštní partnerské podmínky</h2>
-          <p>Některé funkce platformy mohou být dostupné pouze na základě zvláštních partnerských podmínek.</p>
-          <p>Tyto veřejné podmínky upravují základní používání ARENIX.app. Zvláštní partnerské podmínky mohou upravovat další práva, povinnosti, technické funkce, obchodní nastavení, compliance požadavky, ochranu důvěrných informací a další pravidla spolupráce mezi Poskytovatelem a Partnerem.</p>
-          <p>Pokud je mezi těmito veřejnými podmínkami a zvláštními partnerskými podmínkami rozpor, přednost mají zvláštní partnerské podmínky v rozsahu, v jakém se týkají konkrétní schválené partnerské funkcionality.</p>
-        </section>
-
-        <section class="section" id="s21">
-          <h2><span class="num">21</span>Změny podmínek</h2>
-          <p>Poskytovatel může tyto podmínky průběžně aktualizovat.</p>
-          <p>Aktualizované znění bude zveřejněno na platformě nebo oznámeno jiným přiměřeným způsobem.</p>
-          <p>Pokračování v používání platformy po zveřejnění nových podmínek znamená souhlas s aktualizovaným zněním.</p>
-          <p>Pokud uživatel s novým zněním nesouhlasí, musí přestat platformu používat.</p>
-        </section>
-
-        <section class="section" id="s22">
-          <h2><span class="num">22</span>Rozhodné právo a řešení sporů</h2>
-          <p>Rozhodné právo, příslušný soud nebo jiný způsob řešení sporů budou doplněny ve finální verzi těchto podmínek podle právní a obchodní struktury Poskytovatele.</p>
-        </section>
-
-        <section class="section" id="s23">
-          <h2><span class="num">23</span>Kontakt</h2>
-          <p>ARENIX.app je postaven na partnerském modelu. Partner používá platformu k vytvoření vlastní Arény, pozvání své komunity a ověření její aktivity v praxi. Zájemci o partnerský přístup mohou začít prostřednictvím oficiální landing page ARENIX.app.</p>
-          <p>Základní přístup do Core Arena vrstvy je navržen tak, aby Partner mohl jednoduše vytvořit vlastní Arénu, pozvat své členy a ukázat potenciál své komunity. Účastníci Arény nevstupují do platformy přímou veřejnou registrací. Vstup účastníka je možný prostřednictvím pozvánky nebo vstupního odkazu od Partnera, který danou Arénu organizuje.</p> 
-          <p>Partnerská monetizační vrstva je samostatný navazující krok. Je určena pouze pro Partnery, kteří prokáží reálnou aktivitu, disciplínu a obchodní potenciál své komunity, a může podléhat samostatným podmínkám, ověření a schválení Poskytovatelem.</p>
-</p>
-        </section>
-
-        <section class="section" id="s24">
-          <h2><span class="num">24</span>Závěrečné prohlášení</h2>
-          <p>ARENIX je vytvořen pro Partnery, kteří nechtějí mít pouze publikum, ale aktivní komunitu.</p>
-          <p>Základní Aréna dává Partnerovi prostor ukázat výkon, pravidla, pořadí a hodnotu komunity v jednom prostředí.</p>
-          <p>Partnerská monetizační vrstva je samostatný krok pro ty, kteří dokážou prokázat reálnou komunitní aktivitu a jsou připraveni pracovat s ARENIX na vyšší úrovni.</p>
-        </section>
-      </article>
+          <p><strong>Arena Credits</strong> are an internal platform element. They are used to display activity, score, ranking and the performance model within the Arena.</p>
+          <p>Arena Credits help the Partner and their community understand the Arena mechanics without creating any entitlement to payout or financial performance in the basic public layer.</p>
+          <p>Arena Credits:</p><ul>
+<li>have no monetary value;</li>
+<li>are not money;</li>
+<li>are not electronic money;</li>
+<li>are not cryptocurrency;</li>
+<li>are not a stablecoin;</li>
+<li>are not securities;</li>
+<li>are not a financial instrument;</li>
+<li>are not a deposit;</li>
+<li>are not redeemable;</li>
+<li>are not transferable outside the platform;</li>
+<li>do not create any entitlement to profit, yield, reward, payout or investment return.</li>
+</ul>
+          <p>No user has the right to request payout, exchange, refund or any other compensation based on Arena Credits.</p>
+        </section><section class="section" id="s5">
+          <h2><span class="num">5</span>The Arena Key</h2>
+          <p>Each Arena may have its own rule key.</p>
+          <p>This key determines how results, ranking, performance and allocation of Arena Credits are displayed within the Arena.</p>
+          <p>A Partner may set rules so that Arena Credits are allocated according to the leaderboard, performance score, activity or other parameters available in the platform.</p>
+          <p>An example of such a rule may be a model under which the best-ranked part of the leaderboard, for example the Top 40%, receives back or additionally receives Arena Credits within the Arena according to a predefined key.</p>
+          <p>The Arena Key is the reason why an Arena is not merely a results table.</p>
+          <p>Participants see that rules have consequences, ranking has meaning and community activity is reflected in a visible result.</p>
+          <p>The Partner can therefore show their community a model in which performance, discipline and participation are not empty numbers, but create a structured community mechanism.</p>
+          <p>In the basic public layer, the Arena Key relates exclusively to Arena Credits.</p>
+          <p>Arena Credits have no monetary value and do not create any entitlement to money, payout, profit, yield, reward, profit share, investment return or any other property value.</p>
+          <p>Any use of Arena Credits as a substitute for money, a proxy currency or a basis for financial settlement outside the platform is prohibited.</p>
+        </section><section class="section" id="s6">
+          <h2><span class="num">6</span>What the Partner receives</h2>
+          <p>The Partner receives a tool through which they can organize, activate and measure their community.</p>
+          <p>ARENIX enables the Partner to create a professional environment without having to build their own technical infrastructure, leaderboard, credit model, Arena rules and user interface.</p>
+          <p>The Partner may use the Arena in particular as:</p><ul>
+<li>an entry point for new community members;</li>
+<li>a tool for activating an existing community;</li>
+<li>proof of audience interest and activity;</li>
+<li>a way to show the community model in practice;</li>
+<li>a basis for assessing whether the community has potential for the Partner Monetization Layer.</li>
+</ul>
+          <p>A Partner who can bring members of their community, maintain their attention and create activity receives infrastructure through ARENIX that allows them to show the value of their community in numbers, not only in words.</p>
+          <p>The Arena gives the Partner a clear view of whether their community only passively follows content, or is ready to actively respond, engage and function according to rules.</p>
+          <p>This difference is decisive. A community that can create activity, discipline and measurable performance may be ready for the next level of cooperation with ARENIX.</p>
+        </section><section class="section" id="s7">
+          <h2><span class="num">7</span>Partner Monetization Layer</h2>
+          <p>ARENIX may also provide a <strong>Partner Monetization Layer</strong> for selected Partners.</p>
+          <p>This layer is not part of the basic public service and is not automatically available to every user or every Partner.</p>
+          <p>Access to the Partner Monetization Layer may be subject in particular to:</p><ul>
+<li>individual approval;</li>
+<li>a separate Partner agreement;</li>
+<li>technical setup;</li>
+<li>internal assessment;</li>
+<li>a compliance process;</li>
+<li>meeting business, legal or security requirements determined by the Provider.</li>
+</ul>
+          <p>No provision of these Public Terms may be interpreted as creating a legal entitlement for a Partner or user to access the Partner Monetization Layer.</p>
+          <p>The Provider reserves the right to decide:</p><ul>
+<li>which Partner will be given access to the Partner Monetization Layer;</li>
+<li>to what extent it will be made available;</li>
+<li>under what conditions it will be made available;</li>
+<li>when it will be made available;</li>
+<li>whether access will be suspended or terminated.</li>
+</ul>
+          <p>The basic Arena shows the potential of the community.</p>
+          <p>The Partner Monetization Layer is the next step for Partners who can demonstrate that their community has activity, trust, discipline and commercial potential.</p>
+          <p>ARENIX thereby separates an ordinary audience from a community that is ready to work at a higher level.</p>
+        </section><section class="section" id="s8">
+          <h2><span class="num">8</span>Partner's community</h2>
+          <p>ARENIX is designed so that the Partner can work with their own community.</p>
+          <p>The Partner builds their own relationship with their members. ARENIX provides the tool, interface and infrastructure.</p>
+          <p>The Provider does not automatically take over the Partner's database, sell it, trade it or use it as its own business database, unless expressly agreed otherwise or required by law, security reasons, technical protection or a compliance process.</p>
+          <p>The Partner is responsible for the legality of their relationship with the community, the method of inviting members, their own marketing claims and communication outside the platform.</p>
+        </section><section class="section" id="s9">
+          <h2><span class="num">9</span>Prohibited use of the Arena</h2>
+          <p>Neither the Partner nor the user may use ARENIX in a way that damages the integrity of the platform or turns its basic public layer into an unofficial financial mechanism outside the platform.</p>
+          <p>In particular, it is prohibited to:</p><ul>
+<li>use Arena Credits as money or a substitute currency;</li>
+<li>promise payouts based on Arena Credits;</li>
+<li>pay rewards outside the platform based on the leaderboard;</li>
+<li>create unofficial financial pools outside an approved environment;</li>
+<li>present the Arena as an investment opportunity;</li>
+<li>promise profit, yield or guaranteed results;</li>
+<li>mislead community members about the nature of the platform;</li>
+<li>circumvent technical or legal restrictions of the platform;</li>
+<li>copy, imitate or unlawfully use the platform know-how.</li>
+</ul>
+          <p>Violation of this section may lead to immediate restriction or termination of access.</p>
+        </section><section class="section" id="s10">
+          <h2><span class="num">10</span>No investment services</h2>
+          <p>ARENIX does not provide:</p><ul>
+<li>investment advice;</li>
+<li>financial advice;</li>
+<li>brokerage services;</li>
+<li>asset management;</li>
+<li>portfolio management;</li>
+<li>custody services;</li>
+<li>banking services;</li>
+<li>payment accounts;</li>
+<li>exchange services;</li>
+<li>profit guarantees;</li>
+<li>yield products;</li>
+<li>collective investment;</li>
+<li>gambling or casino services.</li>
+</ul>
+          <p>The user must not interpret the Arena, leaderboard, Arena Credits or any results in the platform as investment advice, a financial offer or a guarantee of a future result.</p>
+        </section><section class="section" id="s11">
+          <h2><span class="num">11</span>Market data and performance display</h2>
+          <p>The platform may display market data, price movements, performance metrics or other information relevant to the functioning of the Arena.</p>
+          <p>Such information serves the operation of the user environment, comparison of decisions and display of results according to the Arena rules.</p>
+          <p>The Provider does not guarantee the completeness, accuracy, continuous availability or suitability of market data for any particular purpose.</p>
+          <p>No display of data in the platform constitutes a recommendation to buy, sell, hold or trade any financial instrument, cryptocurrency, token, CFD, derivative or other asset.</p>
+        </section><section class="section" id="s12">
+          <h2><span class="num">12</span>Compliance and verification</h2>
+          <p>The Provider reserves the right to require verification of a user, Partner, organization, age, technical access, wallet, location or other data if needed to protect the platform, comply with legal obligations, perform a security assessment or make the Partner Monetization Layer available.</p>
+          <p>Verification may be performed directly or through a third party.</p>
+          <p>The fact that a user may use the basic public layer without additional verification does not mean that such verification will not be required for other functions or in the future.</p>
+        </section><section class="section" id="s13">
+          <h2><span class="num">13</span>Partner responsibility</h2>
+          <p>The Partner is responsible for ensuring that their use of the platform is lawful, fair and not misleading.</p>
+          <p>The Partner must not state or imply to their community that:</p><ul>
+<li>ARENIX guarantees a payout;</li>
+<li>Arena Credits have monetary value;</li>
+<li>the result in the Arena is guaranteed;</li>
+<li>the platform provides an investment service;</li>
+<li>participation in the Arena is a financial product;</li>
+<li>the Provider manages or holds user funds;</li>
+<li>the Partner has the right to bypass these Terms through their own agreements outside the platform.</li>
+</ul>
+          <p>The Partner is responsible for their own advertising, communication channels, promises and relationships with their community.</p>
+        </section><section class="section" id="s14">
+          <h2><span class="num">14</span>User responsibility</h2>
+          <p>The user is responsible for using the platform lawfully, safely and in accordance with these Terms.</p>
+          <p>The user must not:</p><ul>
+<li>abuse the platform;</li>
+<li>manipulate the leaderboard;</li>
+<li>create fake accounts;</li>
+<li>use automated tools without consent;</li>
+<li>damage the platform;</li>
+<li>circumvent Arena rules;</li>
+<li>mislead other users;</li>
+<li>use the platform for fraud, manipulation or unlawful activity.</li>
+</ul>
+        </section><section class="section" id="s15">
+          <h2><span class="num">15</span>Intellectual property and know-how</h2>
+          <p>The platform, its name, design, structure, interface, Arena logic, leaderboard, credit model, rules, software, documentation, business model, technical solutions and related know-how are protected by the rights of the Provider or its licensors.</p>
+          <p>Without the Provider's prior written consent, neither the user nor the Partner may:</p><ul>
+<li>copy the platform;</li>
+<li>imitate its business or technical model;</li>
+<li>reverse-engineer its logic;</li>
+<li>create derivative products;</li>
+<li>sell or license access to third parties;</li>
+<li>use the platform to create a competing solution;</li>
+<li>misuse obtained information outside the purpose for which access was granted.</li>
+</ul>
+        </section><section class="section" id="s16">
+          <h2><span class="num">16</span>Availability of the platform</h2>
+          <p>The Provider strives to ensure proper functioning of the platform but does not guarantee uninterrupted availability.</p>
+          <p>The platform may be temporarily unavailable due to maintenance, updates, technical errors, security incidents, third-party outages or other circumstances.</p>
+          <p>The Provider may modify, expand, restrict, suspend or terminate the platform or parts of it.</p>
+        </section><section class="section" id="s17">
+          <h2><span class="num">17</span>Third parties</h2>
+          <p>The platform may use third-party services, such as hosting, analytics, data sources, security tools, compliance tools, communication tools or other technical services.</p>
+          <p>The Provider is not responsible for outages, errors, limitations or damages caused by third-party services, unless mandatory legal provisions state otherwise.</p>
+        </section><section class="section" id="s18">
+          <h2><span class="num">18</span>Limitation of liability</h2>
+          <p>To the maximum extent permitted by applicable law, the Provider is not liable for indirect damage, lost profit, loss of business opportunity, loss of data, reputational damage, service outage, improper use of the platform, actions of a Partner or use of the platform contrary to these Terms.</p>
+          <p>Nothing in these Terms excludes liability that cannot be excluded under applicable law.</p>
+        </section><section class="section" id="s19">
+          <h2><span class="num">19</span>Suspension or termination of access</h2>
+          <p>The Provider may restrict, suspend or terminate access of a user or Partner if these Terms are breached or if the Provider reasonably assesses a legal, technical, security, reputational or business risk.</p>
+          <p>This applies in particular in cases of:</p><ul>
+<li>misuse of Arena Credits;</li>
+<li>misleading communication toward the community;</li>
+<li>circumvention of platform rules;</li>
+<li>unauthorized copying of know-how;</li>
+<li>manipulation of results;</li>
+<li>use of the platform for unofficial financial settlement;</li>
+<li>conduct that may damage the Provider, the platform or other users.</li>
+</ul>
+        </section><section class="section" id="s20">
+          <h2><span class="num">20</span>Special Partner Terms</h2>
+          <p>Some platform functions may be available only under special Partner terms.</p>
+          <p>These Public Terms govern the basic use of ARENIX.app. Special Partner Terms may govern additional rights, obligations, technical functions, business setup, compliance requirements, protection of confidential information and other rules of cooperation between the Provider and the Partner.</p>
+          <p>If there is a conflict between these Public Terms and the Special Partner Terms, the Special Partner Terms prevail to the extent that they relate to the specific approved Partner functionality.</p>
+        </section><section class="section" id="s21">
+          <h2><span class="num">21</span>Changes to the Terms</h2>
+          <p>The Provider may update these Terms from time to time.</p>
+          <p>The updated version will be published on the platform or notified in another appropriate manner.</p>
+          <p>Continued use of the platform after the publication of new Terms means acceptance of the updated version.</p>
+          <p>If the user does not agree with the new version, they must stop using the platform.</p>
+        </section><section class="section" id="s22">
+          <h2><span class="num">22</span>Governing law and dispute resolution</h2>
+          <p>The governing law, competent court or other method of dispute resolution will be added in the final version of these Terms according to the Provider's legal and business structure.</p>
+        </section><section class="section" id="s23">
+          <h2><span class="num">23</span>Contact</h2>
+          <p>ARENIX.app is built on a Partner model. The Partner uses the platform to create their own Arena, invite their community and verify its activity in practice. Applicants for Partner access may start through the official ARENIX.app landing page.</p>
+          <p>Basic access to the Core Arena layer is designed so that the Partner can easily create their own Arena, invite their members and show the potential of their community. Arena participants do not enter the platform through direct public registration. Participant entry is possible through an invitation or entry link from the Partner organizing the Arena.</p>
+          <p>The Partner Monetization Layer is a separate follow-up step. It is intended only for Partners who demonstrate real activity, discipline and commercial potential in their community, and may be subject to separate terms, verification and approval by the Provider.</p>
+        </section><section class="section" id="s24">
+          <h2><span class="num">24</span>Final statement</h2>
+          <p>ARENIX is created for Partners who do not want to have only an audience, but an active community.</p>
+          <p>The basic Arena gives the Partner a space to show performance, rules, ranking and community value in one environment.</p>
+          <p>The Partner Monetization Layer is a separate step for those who can demonstrate real community activity and are ready to work with ARENIX at a higher level.</p>
+        </section></article>
     </div>
-
-    <footer class="footer">
-      © ARENIX.app · Veřejné podmínky používání · Core Arena Terms
-    </footer>
+    <footer class="footer">© ARENIX.app · Public Terms of Use · Core Arena Terms</footer>
   </main>
-
   <script>
     (function () {
 
@@ -847,8 +743,8 @@
           const link = document.createElement("a");
           link.href = "#obsah";
           link.className = "section-toc-link";
-          link.setAttribute("aria-label", "Zpět na obsah");
-          link.textContent = "↑ Obsah";
+          link.setAttribute("aria-label", "Back to contents");
+          link.textContent = "↑ Contents";
           heading.appendChild(link);
         }
       });
@@ -878,7 +774,7 @@
         }
       });
       window.addEventListener("beforeprint", function () {
-        document.title = "Tisk není povolen";
+        document.title = "Printing is not allowed";
       });
     })();
   </script>
