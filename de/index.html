@@ -1,1 +1,782 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ARENIX.app | Öffentliche Nutzungsbedingungen</title>
+  <meta name="description" content="Öffentliche Core Arena Terms für ARENIX.app Partner, Creator, Community-Leader und deren Mitglieder." />
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="alternate" hreflang="en" href="https://arenix.app/terms.html" />
+  <link rel="alternate" hreflang="cs" href="https://arenix.app/cs/terms.html" />
+  <link rel="alternate" hreflang="de" href="https://arenix.app/de/terms.html" />
+  <link rel="alternate" hreflang="x-default" href="https://arenix.app/terms.html" />
+  <style>
+    :root {
+      --bg-deep: #07150f;
+      --bg-green: #0d261a;
+      --panel: #fff8e7;
+      --panel-soft: #fbf0d2;
+      --gold: #d6ad55;
+      --gold-soft: #f1d58b;
+      --green: #0f7a4b;
+      --green-dark: #0b4a31;
+      --cream: #fff8e7;
+      --text: #1e1a13;
+      --muted: #6d624d;
+      --line: rgba(214, 173, 85, 0.35);
+      --shadow: rgba(0, 0, 0, 0.32);
+    }
 
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(214, 173, 85, 0.19), transparent 34rem),
+        radial-gradient(circle at top right, rgba(15, 122, 75, 0.32), transparent 31rem),
+        linear-gradient(135deg, var(--bg-deep), var(--bg-green));
+      color: var(--text);
+      line-height: 1.72;
+      -webkit-user-select: none;
+      user-select: none;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+      background-size: 44px 44px;
+      mask-image: linear-gradient(to bottom, rgba(0,0,0,0.95), rgba(0,0,0,0.12));
+    }
+
+    .page {
+      width: min(1120px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 38px 0 72px;
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      border: 1px solid rgba(214, 173, 85, 0.46);
+      border-radius: 30px;
+      background:
+        linear-gradient(135deg, rgba(255, 248, 231, 0.98), rgba(250, 236, 197, 0.96)),
+        var(--cream);
+      box-shadow: 0 30px 80px var(--shadow);
+      padding: clamp(26px, 5vw, 58px);
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: 420px;
+      height: 420px;
+      border-radius: 50%;
+      right: -170px;
+      top: -180px;
+      background: radial-gradient(circle, rgba(214,173,85,0.45), rgba(15,122,75,0.06), transparent 70%);
+    }
+
+    .brand-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      position: relative;
+      z-index: 1;
+      margin-bottom: 32px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .mark {
+      width: 48px;
+      height: 48px;
+      border-radius: 15px;
+      background:
+        linear-gradient(135deg, var(--green), var(--green-dark));
+      border: 1px solid rgba(214, 173, 85, 0.7);
+      box-shadow: 0 10px 30px rgba(15, 122, 75, 0.25);
+      display: grid;
+      place-items: center;
+      color: var(--gold-soft);
+      font-weight: 900;
+      letter-spacing: -0.04em;
+      font-size: 21px;
+    }
+
+    .brand-text strong {
+      display: block;
+      font-size: 17px;
+      letter-spacing: 0.02em;
+      color: var(--green-dark);
+    }
+
+    .brand-text span {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 14px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      color: var(--green-dark);
+      background: rgba(255, 255, 255, 0.45);
+      font-size: 13px;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .badge-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: var(--green);
+      box-shadow: 0 0 0 5px rgba(15, 122, 75, 0.12);
+    }
+
+    h1 {
+      position: relative;
+      z-index: 1;
+      margin: 0;
+      font-size: clamp(38px, 7vw, 76px);
+      line-height: 0.95;
+      letter-spacing: -0.07em;
+      color: #102015;
+    }
+
+    .subtitle {
+      position: relative;
+      z-index: 1;
+      margin: 18px 0 0;
+      max-width: 760px;
+      font-size: clamp(17px, 2.2vw, 23px);
+      line-height: 1.5;
+      color: #3f382b;
+    }
+
+    .meta-grid {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-top: 34px;
+    }
+
+    .meta-card {
+      border: 1px solid rgba(214, 173, 85, 0.35);
+      background: rgba(255, 255, 255, 0.42);
+      border-radius: 18px;
+      padding: 16px;
+    }
+
+    .meta-card span {
+      display: block;
+      color: var(--muted);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.09em;
+      font-weight: 800;
+      margin-bottom: 5px;
+    }
+
+    .meta-card strong {
+      color: #211c13;
+      font-size: 14px;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 24px;
+      align-items: start;
+      margin-top: 26px;
+    }
+
+    .toc {
+      position: sticky;
+      top: 20px;
+      border-radius: 24px;
+      background: rgba(255, 248, 231, 0.94);
+      border: 1px solid rgba(214, 173, 85, 0.36);
+      box-shadow: 0 18px 45px rgba(0, 0, 0, 0.18);
+      padding: 20px;
+      max-height: calc(100vh - 40px);
+      overflow: auto;
+    }
+
+    .toc h2 {
+      margin: 0 0 12px;
+      color: var(--green-dark);
+      font-size: 15px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .toc a {
+      display: block;
+      color: #473e2e;
+      text-decoration: none;
+      font-size: 13px;
+      padding: 8px 0;
+      border-bottom: 1px solid rgba(214, 173, 85, 0.18);
+    }
+
+    .toc a:hover {
+      color: var(--green);
+    }
+
+    .content {
+      min-width: 0;
+    }
+
+    .notice {
+      border-radius: 24px;
+      background:
+        linear-gradient(135deg, rgba(15, 122, 75, 0.12), rgba(214, 173, 85, 0.18)),
+        var(--panel);
+      border: 1px solid rgba(214, 173, 85, 0.44);
+      box-shadow: 0 18px 45px rgba(0, 0, 0, 0.16);
+      padding: clamp(22px, 4vw, 34px);
+      margin-bottom: 20px;
+    }
+
+    .notice h2 {
+      margin-top: 0;
+      color: var(--green-dark);
+      font-size: 25px;
+    }
+
+    .section {
+      border-radius: 24px;
+      background: rgba(255, 248, 231, 0.96);
+      border: 1px solid rgba(214, 173, 85, 0.32);
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.15);
+      padding: clamp(22px, 4vw, 34px);
+      margin-bottom: 18px;
+    }
+
+    .section h2 {
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+      margin: 0 0 18px;
+      color: #102015;
+      font-size: clamp(23px, 3vw, 34px);
+      line-height: 1.15;
+      letter-spacing: -0.03em;
+    }
+
+    .section h2 .num {
+      flex: 0 0 auto;
+      min-width: 38px;
+      height: 38px;
+      border-radius: 12px;
+      display: inline-grid;
+      place-items: center;
+      background: linear-gradient(135deg, var(--green), var(--green-dark));
+      color: var(--gold-soft);
+      font-size: 16px;
+      letter-spacing: 0;
+    }
+
+    p {
+      margin: 0 0 14px;
+      font-size: 16px;
+    }
+
+    strong {
+      color: #0d3d29;
+    }
+
+    ul {
+      margin: 10px 0 18px;
+      padding-left: 20px;
+    }
+
+    li {
+      margin: 7px 0;
+    }
+
+    .rule {
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(214,173,85,0.55), transparent);
+      margin: 24px 0;
+    }
+
+    .footer {
+      color: rgba(255, 248, 231, 0.78);
+      text-align: center;
+      margin-top: 34px;
+      font-size: 13px;
+    }
+
+    .watermark {
+      position: fixed;
+      right: 18px;
+      bottom: 14px;
+      color: rgba(255, 248, 231, 0.5);
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      pointer-events: none;
+      z-index: 50;
+    }
+
+
+    .section h2 .section-toc-link,
+    .notice h2 .section-toc-link {
+      display: none;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      margin-left: auto;
+      padding: 7px 11px;
+      border-radius: 999px;
+      border: 1px solid rgba(214, 173, 85, 0.46);
+      background: rgba(255, 255, 255, 0.54);
+      color: var(--green-dark);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.02em;
+      line-height: 1;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .section h2 .section-toc-link:hover,
+    .notice h2 .section-toc-link:hover {
+      background: rgba(15, 122, 75, 0.10);
+      border-color: rgba(15, 122, 75, 0.36);
+      color: var(--green);
+    }
+
+    .mobile-toc-float {
+      display: none;
+      position: fixed;
+      right: 16px;
+      bottom: 16px;
+      z-index: 100;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 12px 16px;
+      border-radius: 999px;
+      border: 1px solid rgba(214, 173, 85, 0.62);
+      background:
+        linear-gradient(135deg, rgba(255, 248, 231, 0.98), rgba(241, 213, 139, 0.96));
+      color: var(--green-dark);
+      box-shadow: 0 16px 38px rgba(0, 0, 0, 0.24);
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: 0.03em;
+      text-decoration: none;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .mobile-toc-float:active {
+      transform: translateY(1px);
+    }
+
+    @media (max-width: 900px) {
+
+      .page {
+        width: min(100% - 22px, 1120px);
+        padding: 20px 0 92px;
+      }
+
+      .section,
+      .notice,
+      .toc {
+        scroll-margin-top: 14px;
+      }
+
+      .section h2,
+      .notice h2 {
+        align-items: center;
+        flex-wrap: nowrap;
+      }
+
+      .section h2 .section-toc-link,
+      .notice h2 .section-toc-link {
+        display: inline-flex;
+      }
+
+      .mobile-toc-float {
+        display: inline-flex;
+      }
+      .layout {
+        grid-template-columns: 1fr;
+      }
+
+      .toc {
+        position: relative;
+        top: 0;
+        max-height: none;
+      }
+
+      .meta-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .brand-row {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+
+    /* === LANGUAGE SWITCHER PATCH === */
+    .terms-actions{display:flex;align-items:center;gap:12px;flex-wrap:wrap;justify-content:flex-end}
+    .lang-switch{display:inline-flex;align-items:center;gap:7px;border:1px solid rgba(214,173,85,.35);background:rgba(255,255,255,.40);border-radius:999px;padding:6px 8px}
+    .lang-switch a{color:var(--green-dark);text-decoration:none;font-size:12px;font-weight:900;letter-spacing:.06em;padding:5px 8px;border-radius:999px}
+    .lang-switch a.active{background:linear-gradient(135deg,var(--green),var(--green-dark));color:var(--gold-soft)}
+    .lang-switch a:hover{background:rgba(15,122,75,.10)}
+    @media(max-width:900px){.terms-actions{justify-content:flex-start}}
+
+    @media print {
+      body * {
+        visibility: hidden !important;
+      }
+
+      body::after {
+        content: "Das Drucken dieser Seite ist nicht erlaubt.";
+        visibility: visible !important;
+        display: block;
+        color: #111;
+        font-size: 22px;
+        padding: 40px;
+      }
+    }
+  </style>
+</head>
+<body oncontextmenu="return false">
+  <a href="#obsah" class="mobile-toc-float" aria-label="↑ Inhalt">↑ Inhalt</a>
+  <div class="watermark">ARENIX.app · Protected Terms View</div>
+  <main class="page">
+    <header class="hero">
+      <div class="brand-row">
+        <div class="brand"><div class="mark">A</div><div class="brand-text"><strong>ARENIX.app</strong><span>Core Arena Terms</span></div></div>
+        <div class="terms-actions"><nav class="lang-switch" aria-label="Language switcher"><a class="" href="/terms.html">EN</a><a href="/cs/terms.html">CZ</a><a class="active" href="/de/terms.html">DE</a></nav><div class="badge"><span class="badge-dot"></span>Öffentliche Nutzungsbedingungen</div></div>
+      </div>
+      <h1>Core Arena Terms</h1>
+      <p class="subtitle">Öffentliche Nutzungsbedingungen der Plattform ARENIX.app für Partner, Creator, Community-Leader und deren Mitglieder.</p>
+      <div class="meta-grid"><div class="meta-card"><span>Gültigkeitsdatum</span><strong>03. MAY 2026</strong></div><div class="meta-card"><span>Software-Anbieter</span><strong>AKO SOLUTIONS LLC, TRADE LICENCE 887171, DUBAI, UAE</strong></div><div class="meta-card"><span>Website</span><strong>arenix.app and its subpages</strong></div></div>
+    </header>
+    <div class="layout">
+      <aside class="toc" id="obsah" aria-label="Inhalt"><h2>Inhalt</h2><a href="#tldr">Zusammenfassung in 30 Sekunden</a><a href="#s1">1. Einleitende Bestimmungen</a><a href="#s2">2. Was ARENIX ist</a><a href="#s3">3. Die Arena als zentrales Produktelement</a><a href="#s4">4. Arena Credits</a><a href="#s5">5. Der Arena-Schlüssel</a><a href="#s6">6. Was der Partner erhält</a><a href="#s7">7. Partner-Monetarisierungsebene</a><a href="#s8">8. Community des Partners</a><a href="#s9">9. Verbotene Nutzung der Arena</a><a href="#s10">10. Keine Investmentdienstleistungen</a><a href="#s11">11. Marktdaten und Performance-Anzeige</a><a href="#s12">12. Compliance und Verifizierung</a><a href="#s13">13. Verantwortung des Partners</a><a href="#s14">14. Verantwortung des Nutzers</a><a href="#s15">15. Geistiges Eigentum und Know-how</a><a href="#s16">16. Verfügbarkeit der Plattform</a><a href="#s17">17. Dritte</a><a href="#s18">18. Haftungsbeschränkung</a><a href="#s19">19. Aussetzung oder Beendigung des Zugangs</a><a href="#s20">20. Besondere Partnerbedingungen</a><a href="#s21">21. Änderungen der Bedingungen</a><a href="#s22">22. Anwendbares Recht und Streitbeilegung</a><a href="#s23">23. Kontakt</a><a href="#s24">24. Schlusserklärung</a></aside>
+      <article class="content"><section class="notice" id="tldr">
+          <h2>Zusammenfassung in 30 Sekunden</h2>
+          <p><strong>ARENIX.app</strong> ist eine technologische Infrastruktur für Partner, Creator und Community-Leader, die ein passives Publikum in eine aktive und messbare Community verwandeln möchten.</p>
+          <p>Ein Partner erstellt seine eigene Arena, lädt Mitglieder seiner Community ein, legt Regeln fest und beobachtet Aktivität, Rangfolge und Community-Performance in einer professionellen Umgebung.</p>
+          <p>Der Kern der Arena liegt in den Regeln. Ein Partner kann ein Modell festlegen, bei dem Erfolg in der Arena nicht ohne Ergebnis verschwindet, sondern nach einem vorab definierten Schlüssel an den bestplatzierten Teil der Community zurückgespiegelt wird – zum Beispiel an die Top 40% des Leaderboards.</p>
+          <p>In der grundlegenden öffentlichen Ebene wird dieses Modell ausschließlich über Arena Credits dargestellt. Arena Credits sind ein internes Plattformelement, haben keinen Geldwert, sind nicht auszahlbar und dürfen nicht als Geld oder Geldersatz verwendet werden.</p>
+          <p>Die Partner-Monetarisierungsebene ist ein separater und limitierter Schritt für genehmigte Partner, die reale Aktivität, Disziplin und kommerzielles Potenzial ihrer Community nachweisen. Sie ist kein automatischer Bestandteil der öffentlichen Plattform und unterliegt gesonderten Bedingungen.</p>
+        </section><section class="section" id="s1">
+          <h2><span class="num">1</span>Einleitende Bestimmungen</h2>
+          <p>Diese öffentlichen Nutzungsbedingungen regeln den Zugang zur und die Nutzung der Plattform <strong>ARENIX.app</strong>.</p>
+          <p>Die Plattform ist für Partner, Creator, Mentoren, Educators, Community-Leader und deren Mitglieder bestimmt, die mit einer Community über digitale Arenen, ein Leaderboard, interne Credits, Regeln und Performance-Anzeigen arbeiten möchten.</p>
+          <p>Durch die Nutzung der Plattform bestätigt der Nutzer, dass er diese Bedingungen gelesen, verstanden und akzeptiert hat.</p>
+          <p>Wenn ein Nutzer diesen Bedingungen nicht zustimmt, darf er die Plattform nicht nutzen.</p>
+        </section><section class="section" id="s2">
+          <h2><span class="num">2</span>Was ARENIX ist</h2>
+          <p><strong>ARENIX.app</strong> ist eine Softwareplattform zur Erstellung und Verwaltung digitaler Arenen.</p>
+          <p>Eine Arena ist eine Online-Umgebung, in der ein Partner die Aktivität seiner Community organisiert, Regeln festlegt, die Performance einzelner Mitglieder verfolgt und mit internen Plattformelementen arbeitet.</p>
+          <p>ARENIX ermöglicht insbesondere:</p><ul>
+<li>eine eigene Arena erstellen;</li>
+<li>Mitglieder der eigenen Community des Partners einladen;</li>
+<li>grundlegende Arena-Regeln festlegen;</li>
+<li>Arena Credits verwenden;</li>
+<li>ein Leaderboard anzeigen;</li>
+<li>die Performance von Mitgliedern vergleichen;</li>
+<li>Community-Aktivität beobachten;</li>
+<li>Vertrauen durch transparente Regeln aufbauen;</li>
+<li>Zugang zu einer höheren Partnerebene beantragen.</li>
+</ul>
+          <p>ARENIX ist eine technologische Lösung.</p>
+          <p>ARENIX ist kein Broker, keine Börse, keine Investmentplattform, kein Vermögensverwalter, kein Zahlungsinstitut, kein Casino, kein Glücksspielanbieter und kein Anbieter von Investment- oder Finanzberatung.</p>
+        </section><section class="section" id="s3">
+          <h2><span class="num">3</span>Die Arena als zentrales Produktelement</h2>
+          <p>Die Arena ist der zentrale Raum der Plattform.</p>
+          <p>Über die Arena schafft der Partner einen Ort, an dem seine Community Regeln, Rangfolge, Performance, Aktivität und Ergebnisse in einer klaren Umgebung sehen kann.</p>
+          <p>Die Arena kann mit Marktdaten, Preisentwicklungen, Nutzerentscheidungen, internen Credits, Performance-Scores und einem Leaderboard arbeiten.</p>
+          <p>Ziel der Arena ist es, dem Partner und seiner Community zu zeigen, wie ein organisiertes Modell aussieht, in dem die Community nicht nur ein passives Publikum ist, sondern eine aktive Umgebung mit klaren Regeln, messbarer Performance und sichtbarem Wert.</p>
+        </section><section class="section" id="s4">
+          <h2><span class="num">4</span>Arena Credits</h2>
+          <p><strong>Arena Credits</strong> sind ein internes Plattformelement. Sie werden verwendet, um Aktivität, Score, Rangfolge und das Performance-Modell innerhalb der Arena darzustellen.</p>
+          <p>Arena Credits helfen dem Partner und seiner Community, die Mechanik der Arena zu verstehen, ohne in der grundlegenden öffentlichen Ebene einen Anspruch auf Auszahlung oder finanzielle Leistung zu begründen.</p>
+          <p>Arena Credits:</p><ul>
+<li>have no monetary value;</li>
+<li>sind kein Geld;</li>
+<li>sind kein elektronisches Geld;</li>
+<li>sind keine Kryptowährung;</li>
+<li>sind kein Stablecoin;</li>
+<li>sind keine Wertpapiere;</li>
+<li>sind kein Finanzinstrument;</li>
+<li>sind keine Einlage;</li>
+<li>sind nicht auszahlbar;</li>
+<li>sind nicht außerhalb der Plattform übertragbar;</li>
+<li>begründen keinen Anspruch auf Gewinn, Rendite, Vergütung, Auszahlung oder Investmentertrag.</li>
+</ul>
+          <p>Kein Nutzer hat das Recht, auf Grundlage von Arena Credits eine Auszahlung, einen Umtausch, eine Rückerstattung oder eine andere Kompensation zu verlangen.</p>
+        </section><section class="section" id="s5">
+          <h2><span class="num">5</span>Der Arena-Schlüssel</h2>
+          <p>Jede Arena kann einen eigenen Regelschlüssel haben.</p>
+          <p>Dieser Schlüssel bestimmt, wie Ergebnisse, Rangfolge, Performance und die Zuordnung von Arena Credits innerhalb der Arena angezeigt werden.</p>
+          <p>Ein Partner kann Regeln so festlegen, dass Arena Credits nach Leaderboard, Performance-Score, Aktivität oder anderen in der Plattform verfügbaren Parametern zugeordnet werden.</p>
+          <p>Ein Beispiel für eine solche Regel kann ein Modell sein, nach dem der bestplatzierte Teil des Leaderboards, zum Beispiel die Top 40%, innerhalb der Arena nach einem vorab definierten Schlüssel Arena Credits zurückerhält oder zusätzlich erhält.</p>
+          <p>Der Arena-Schlüssel ist der Grund, warum eine Arena nicht nur eine Ergebnistabelle ist.</p>
+          <p>Teilnehmer sehen, dass Regeln Konsequenzen haben, Rangfolge Bedeutung hat und Community-Aktivität in ein sichtbares Ergebnis einfließt.</p>
+          <p>Der Partner kann seiner Community dadurch ein Modell zeigen, in dem Performance, Disziplin und Teilnahme keine leeren Zahlen sind, sondern einen strukturierten Community-Mechanismus bilden.</p>
+          <p>In der grundlegenden öffentlichen Ebene bezieht sich der Arena-Schlüssel ausschließlich auf Arena Credits.</p>
+          <p>Arena Credits haben keinen Geldwert und begründen keinen Anspruch auf Geld, Auszahlung, Gewinn, Rendite, Vergütung, Profit Share, Investmentertrag oder einen sonstigen Vermögenswert.</p>
+          <p>Jede Nutzung von Arena Credits als Geldersatz, Ersatzwährung oder Grundlage für eine finanzielle Abwicklung außerhalb der Plattform ist verboten.</p>
+        </section><section class="section" id="s6">
+          <h2><span class="num">6</span>Was der Partner erhält</h2>
+          <p>Der Partner erhält ein Tool, mit dem er seine Community organisieren, aktivieren und messen kann.</p>
+          <p>ARENIX ermöglicht dem Partner, eine professionelle Umgebung zu schaffen, ohne selbst eine technische Infrastruktur, ein Leaderboard, ein Credit-Modell, Arena-Regeln und eine Benutzeroberfläche entwickeln zu müssen.</p>
+          <p>Der Partner kann die Arena insbesondere nutzen als:</p><ul>
+<li>Einstiegspunkt für neue Community-Mitglieder;</li>
+<li>Tool zur Aktivierung einer bestehenden Community;</li>
+<li>Nachweis von Interesse und Aktivität des Publikums;</li>
+<li>Möglichkeit, ein Community-Modell in der Praxis zu zeigen;</li>
+<li>Grundlage zur Beurteilung, ob die Community Potenzial für die Partner-Monetarisierungsebene hat.</li>
+</ul>
+          <p>Ein Partner, der Mitglieder seiner Community bringen, deren Aufmerksamkeit halten und Aktivität erzeugen kann, erhält über ARENIX eine Infrastruktur, mit der er den Wert seiner Community in Zahlen und nicht nur in Worten zeigen kann.</p>
+          <p>Die Arena gibt dem Partner ein klares Bild davon, ob seine Community Inhalte nur passiv verfolgt oder bereit ist, aktiv zu reagieren, sich einzubringen und nach Regeln zu funktionieren.</p>
+          <p>Gerade dieser Unterschied ist entscheidend. Eine Community, die Aktivität, Disziplin und messbare Performance erzeugen kann, kann für die nächste Ebene der Zusammenarbeit mit ARENIX bereit sein.</p>
+        </section><section class="section" id="s7">
+          <h2><span class="num">7</span>Partner-Monetarisierungsebene</h2>
+          <p>ARENIX kann für ausgewählte Partner auch eine <strong>Partner-Monetarisierungsebene</strong> bereitstellen.</p>
+          <p>Diese Ebene ist nicht Teil des grundlegenden öffentlichen Dienstes und nicht automatisch jedem Nutzer oder jedem Partner zugänglich.</p>
+          <p>Der Zugang zur Partner-Monetarisierungsebene kann insbesondere abhängig gemacht werden von:</p><ul>
+<li>individueller Genehmigung;</li>
+<li>einer gesonderten Partnervereinbarung;</li>
+<li>technischer Einrichtung;</li>
+<li>interner Bewertung;</li>
+<li>einem Compliance-Prozess;</li>
+<li>der Erfüllung geschäftlicher, rechtlicher oder sicherheitsbezogener Anforderungen, die vom Anbieter festgelegt werden.</li>
+</ul>
+          <p>Keine Bestimmung dieser öffentlichen Bedingungen darf so ausgelegt werden, dass einem Partner oder Nutzer ein rechtlicher Anspruch auf Zugang zur Partner-Monetarisierungsebene entsteht.</p>
+          <p>Der Anbieter behält sich das Recht vor zu entscheiden:</p><ul>
+<li>welchem Partner die Partner-Monetarisierungsebene zugänglich gemacht wird;</li>
+<li>in welchem Umfang sie zugänglich gemacht wird;</li>
+<li>unter welchen Bedingungen sie zugänglich gemacht wird;</li>
+<li>wann sie zugänglich gemacht wird;</li>
+<li>ob der Zugang ausgesetzt oder beendet wird.</li>
+</ul>
+          <p>Die grundlegende Arena zeigt das Potenzial der Community.</p>
+          <p>Die Partner-Monetarisierungsebene ist der nächste Schritt für Partner, die nachweisen können, dass ihre Community Aktivität, Vertrauen, Disziplin und kommerzielles Potenzial hat.</p>
+          <p>ARENIX trennt damit ein gewöhnliches Publikum von einer Community, die bereit ist, auf einer höheren Ebene zu arbeiten.</p>
+        </section><section class="section" id="s8">
+          <h2><span class="num">8</span>Community des Partners</h2>
+          <p>ARENIX ist so konzipiert, dass der Partner mit seiner eigenen Community arbeiten kann.</p>
+          <p>Der Partner baut seine eigene Beziehung zu seinen Mitgliedern auf. ARENIX stellt das Tool, die Schnittstelle und die Infrastruktur bereit.</p>
+          <p>Der Anbieter übernimmt die Datenbank des Partners nicht automatisch, verkauft sie nicht, handelt nicht mit ihr und verwendet sie nicht als eigene Geschäftsdatenbank, sofern nichts anderes ausdrücklich vereinbart ist oder dies durch Gesetz, Sicherheitsgründe, technische Absicherung oder einen Compliance-Prozess erforderlich ist.</p>
+          <p>Der Partner ist verantwortlich für die Rechtmäßigkeit seiner Beziehung zur Community, die Art der Einladung von Mitgliedern, seine eigenen Marketingaussagen und die Kommunikation außerhalb der Plattform.</p>
+        </section><section class="section" id="s9">
+          <h2><span class="num">9</span>Verbotene Nutzung der Arena</h2>
+          <p>Weder der Partner noch der Nutzer dürfen ARENIX in einer Weise nutzen, die die Integrität der Plattform beschädigt oder ihre grundlegende öffentliche Ebene in einen inoffiziellen finanziellen Mechanismus außerhalb der Plattform umwandelt.</p>
+          <p>Insbesondere ist verboten:</p><ul>
+<li>Arena Credits als Geld oder Ersatzwährung zu verwenden;</li>
+<li>Auszahlungen auf Grundlage von Arena Credits zu versprechen;</li>
+<li>Belohnungen außerhalb der Plattform auf Grundlage des Leaderboards auszuzahlen;</li>
+<li>inoffizielle finanzielle Pools außerhalb einer genehmigten Umgebung zu schaffen;</li>
+<li>die Arena als Investmentmöglichkeit darzustellen;</li>
+<li>Gewinn, Rendite oder ein garantiertes Ergebnis zu versprechen;</li>
+<li>Community-Mitglieder über die Natur der Plattform irrezuführen;</li>
+<li>technische oder rechtliche Einschränkungen der Plattform zu umgehen;</li>
+<li>das Know-how der Plattform zu kopieren, nachzuahmen oder unrechtmäßig zu nutzen.</li>
+</ul>
+          <p>Ein Verstoß gegen diesen Abschnitt kann zur sofortigen Einschränkung oder Beendigung des Zugangs führen.</p>
+        </section><section class="section" id="s10">
+          <h2><span class="num">10</span>Keine Investmentdienstleistungen</h2>
+          <p>ARENIX bietet nicht an:</p><ul>
+<li>Investmentberatung;</li>
+<li>Finanzberatung;</li>
+<li>Brokerage-Dienstleistungen;</li>
+<li>Vermögensverwaltung;</li>
+<li>Portfolioverwaltung;</li>
+<li>Custody-Dienstleistungen;</li>
+<li>Bankdienstleistungen;</li>
+<li>Zahlungskonten;</li>
+<li>Börsendienstleistungen;</li>
+<li>Gewinngarantien;</li>
+<li>Renditeprodukte;</li>
+<li>kollektive Kapitalanlage;</li>
+<li>Glücksspiel- oder Casino-Dienstleistungen.</li>
+</ul>
+          <p>Der Nutzer darf die Arena, das Leaderboard, Arena Credits oder Ergebnisse in der Plattform nicht als Investmentempfehlung, Finanzangebot oder Garantie eines zukünftigen Ergebnisses interpretieren.</p>
+        </section><section class="section" id="s11">
+          <h2><span class="num">11</span>Marktdaten und Performance-Anzeige</h2>
+          <p>Die Plattform kann Marktdaten, Preisentwicklungen, Performance-Metriken oder andere für den Betrieb der Arena relevante Informationen anzeigen.</p>
+          <p>Diese Informationen dienen dem Betrieb der Benutzerumgebung, dem Vergleich von Entscheidungen und der Anzeige von Ergebnissen gemäß den Arena-Regeln.</p>
+          <p>Der Anbieter garantiert nicht die Vollständigkeit, Genauigkeit, ununterbrochene Verfügbarkeit oder Eignung von Marktdaten für einen bestimmten Zweck.</p>
+          <p>Keine Datenanzeige in der Plattform stellt eine Empfehlung dar, ein Finanzinstrument, eine Kryptowährung, einen Token, CFD, ein Derivat oder ein anderes Asset zu kaufen, zu verkaufen, zu halten oder zu handeln.</p>
+        </section><section class="section" id="s12">
+          <h2><span class="num">12</span>Compliance und Verifizierung</h2>
+          <p>Der Anbieter behält sich das Recht vor, eine Verifizierung des Nutzers, Partners, der Organisation, des Alters, des technischen Zugangs, einer Wallet, des Standorts oder anderer Daten zu verlangen, wenn dies zum Schutz der Plattform, zur Erfüllung rechtlicher Pflichten, zur Sicherheitsbewertung oder zur Freischaltung der Partner-Monetarisierungsebene erforderlich ist.</p>
+          <p>Die Verifizierung kann direkt oder über einen Dritten erfolgen.</p>
+          <p>Die Tatsache, dass ein Nutzer die grundlegende öffentliche Ebene ohne zusätzliche Verifizierung nutzen kann, bedeutet nicht, dass eine solche Verifizierung für andere Funktionen oder künftig nicht erforderlich sein wird.</p>
+        </section><section class="section" id="s13">
+          <h2><span class="num">13</span>Verantwortung des Partners</h2>
+          <p>Der Partner ist dafür verantwortlich, dass seine Nutzung der Plattform rechtmäßig, korrekt und nicht irreführend ist.</p>
+          <p>Der Partner darf gegenüber seiner Community nicht behaupten oder andeuten, dass:</p><ul>
+<li>ARENIX eine Auszahlung garantiert;</li>
+<li>Arena Credits einen Geldwert haben;</li>
+<li>das Ergebnis in der Arena garantiert ist;</li>
+<li>die Plattform eine Investmentdienstleistung erbringt;</li>
+<li>die Teilnahme an der Arena ein Finanzprodukt ist;</li>
+<li>der Anbieter Gelder von Nutzern verwaltet oder hält;</li>
+<li>der Partner berechtigt ist, diese Bedingungen durch eigene Vereinbarungen außerhalb der Plattform zu umgehen.</li>
+</ul>
+          <p>Der Partner ist verantwortlich für eigene Werbung, eigene Kommunikationskanäle, eigene Versprechen und eigene Beziehungen zu seiner Community.</p>
+        </section><section class="section" id="s14">
+          <h2><span class="num">14</span>Verantwortung des Nutzers</h2>
+          <p>Der Nutzer ist dafür verantwortlich, die Plattform rechtmäßig, sicher und gemäß diesen Bedingungen zu nutzen.</p>
+          <p>Der Nutzer darf nicht:</p><ul>
+<li>die Plattform missbrauchen;</li>
+<li>das Leaderboard manipulieren;</li>
+<li>falsche Konten erstellen;</li>
+<li>automatisierte Tools ohne Zustimmung verwenden;</li>
+<li>die Plattform beschädigen;</li>
+<li>Arena-Regeln umgehen;</li>
+<li>andere Nutzer irreführen;</li>
+<li>die Plattform für Betrug, Manipulation oder rechtswidrige Aktivitäten verwenden.</li>
+</ul>
+        </section><section class="section" id="s15">
+          <h2><span class="num">15</span>Geistiges Eigentum und Know-how</h2>
+          <p>Die Plattform, ihr Name, Design, ihre Struktur, Schnittstelle, Arena-Logik, das Leaderboard, Credit-Modell, Regeln, Software, Dokumentation, Geschäftsmodell, technische Lösungen und das damit verbundene Know-how sind durch Rechte des Anbieters oder seiner Lizenzgeber geschützt.</p>
+          <p>Ohne vorherige schriftliche Zustimmung des Anbieters dürfen weder der Nutzer noch der Partner:</p><ul>
+<li>die Plattform kopieren;</li>
+<li>ihr Geschäfts- oder Technikmodell nachahmen;</li>
+<li>ihre Logik rückwärts analysieren;</li>
+<li>abgeleitete Produkte erstellen;</li>
+<li>Zugang an Dritte verkaufen oder lizenzieren;</li>
+<li>die Plattform zur Erstellung einer konkurrierenden Lösung verwenden;</li>
+<li>erhaltene Informationen außerhalb des Zwecks missbrauchen, zu dem der Zugang gewährt wurde.</li>
+</ul>
+        </section><section class="section" id="s16">
+          <h2><span class="num">16</span>Verfügbarkeit der Plattform</h2>
+          <p>Der Anbieter bemüht sich um den ordnungsgemäßen Betrieb der Plattform, garantiert jedoch keine ununterbrochene Verfügbarkeit.</p>
+          <p>Die Plattform kann aufgrund von Wartung, Aktualisierung, technischen Fehlern, Sicherheitsvorfällen, Ausfällen Dritter oder anderen Umständen vorübergehend nicht verfügbar sein.</p>
+          <p>Der Anbieter kann die Plattform oder Teile davon ändern, erweitern, einschränken, aussetzen oder beenden.</p>
+        </section><section class="section" id="s17">
+          <h2><span class="num">17</span>Dritte</h2>
+          <p>Die Plattform kann Dienste Dritter nutzen, beispielsweise Hosting, Analytics, Datenquellen, Sicherheitstools, Compliance-Tools, Kommunikationstools oder andere technische Dienste.</p>
+          <p>Der Anbieter haftet nicht für Ausfälle, Fehler, Einschränkungen oder Schäden, die durch Dienste Dritter verursacht werden, sofern zwingende gesetzliche Vorschriften nichts anderes bestimmen.</p>
+        </section><section class="section" id="s18">
+          <h2><span class="num">18</span>Haftungsbeschränkung</h2>
+          <p>Soweit nach anwendbarem Recht zulässig, haftet der Anbieter nicht für indirekte Schäden, entgangenen Gewinn, Verlust von Geschäftschancen, Datenverlust, Reputationsschäden, Serviceausfälle, unsachgemäße Nutzung der Plattform, Handlungen eines Partners oder Nutzung der Plattform entgegen diesen Bedingungen.</p>
+          <p>Nichts in diesen Bedingungen schließt eine Haftung aus, die nach anwendbarem Recht nicht ausgeschlossen werden kann.</p>
+        </section><section class="section" id="s19">
+          <h2><span class="num">19</span>Aussetzung oder Beendigung des Zugangs</h2>
+          <p>Der Anbieter kann den Zugang eines Nutzers oder Partners einschränken, aussetzen oder beenden, wenn diese Bedingungen verletzt werden oder wenn der Anbieter ein rechtliches, technisches, sicherheitsbezogenes, reputationsbezogenes oder geschäftliches Risiko begründet feststellt.</p>
+          <p>Dies gilt insbesondere bei:</p><ul>
+<li>Missbrauch von Arena Credits;</li>
+<li>irreführender Kommunikation gegenüber der Community;</li>
+<li>Umgehung der Plattformregeln;</li>
+<li>unbefugtem Kopieren von Know-how;</li>
+<li>Manipulation von Ergebnissen;</li>
+<li>Nutzung der Plattform für inoffizielle finanzielle Abwicklung;</li>
+<li>Verhalten, das den Anbieter, die Plattform oder andere Nutzer schädigen kann.</li>
+</ul>
+        </section><section class="section" id="s20">
+          <h2><span class="num">20</span>Besondere Partnerbedingungen</h2>
+          <p>Einige Funktionen der Plattform können nur auf Grundlage besonderer Partnerbedingungen verfügbar sein.</p>
+          <p>Diese öffentlichen Bedingungen regeln die grundlegende Nutzung von ARENIX.app. Besondere Partnerbedingungen können weitere Rechte, Pflichten, technische Funktionen, geschäftliche Einstellungen, Compliance-Anforderungen, den Schutz vertraulicher Informationen und weitere Regeln der Zusammenarbeit zwischen Anbieter und Partner regeln.</p>
+          <p>Bei einem Widerspruch zwischen diesen öffentlichen Bedingungen und besonderen Partnerbedingungen haben die besonderen Partnerbedingungen Vorrang, soweit sie die konkrete genehmigte Partnerfunktion betreffen.</p>
+        </section><section class="section" id="s21">
+          <h2><span class="num">21</span>Änderungen der Bedingungen</h2>
+          <p>Der Anbieter kann diese Bedingungen von Zeit zu Zeit aktualisieren.</p>
+          <p>Die aktualisierte Fassung wird auf der Plattform veröffentlicht oder auf andere angemessene Weise mitgeteilt.</p>
+          <p>Die fortgesetzte Nutzung der Plattform nach Veröffentlichung neuer Bedingungen bedeutet Zustimmung zur aktualisierten Fassung.</p>
+          <p>Wenn der Nutzer der neuen Fassung nicht zustimmt, muss er die Nutzung der Plattform einstellen.</p>
+        </section><section class="section" id="s22">
+          <h2><span class="num">22</span>Anwendbares Recht und Streitbeilegung</h2>
+          <p>Das anwendbare Recht, das zuständige Gericht oder eine andere Art der Streitbeilegung werden in der finalen Fassung dieser Bedingungen entsprechend der rechtlichen und geschäftlichen Struktur des Anbieters ergänzt.</p>
+        </section><section class="section" id="s23">
+          <h2><span class="num">23</span>Kontakt</h2>
+          <p>ARENIX.app basiert auf einem Partnermodell. Der Partner nutzt die Plattform, um seine eigene Arena zu erstellen, seine Community einzuladen und deren Aktivität in der Praxis zu überprüfen. Interessenten an einem Partnerzugang können über die offizielle Landing Page von ARENIX.app beginnen.</p>
+          <p>Der grundlegende Zugang zur Core-Arena-Ebene ist so gestaltet, dass der Partner einfach seine eigene Arena erstellen, seine Mitglieder einladen und das Potenzial seiner Community zeigen kann. Teilnehmer der Arena treten der Plattform nicht über eine direkte öffentliche Registrierung bei. Der Eintritt eines Teilnehmers ist über eine Einladung oder einen Einstiegslink des Partners möglich, der die jeweilige Arena organisiert.</p>
+          <p>Die Partner-Monetarisierungsebene ist ein separater Folgeschritt. Sie ist nur für Partner bestimmt, die reale Aktivität, Disziplin und kommerzielles Potenzial ihrer Community nachweisen, und kann besonderen Bedingungen, Verifizierung und Genehmigung durch den Anbieter unterliegen.</p>
+        </section><section class="section" id="s24">
+          <h2><span class="num">24</span>Schlusserklärung</h2>
+          <p>ARENIX wurde für Partner geschaffen, die nicht nur ein Publikum, sondern eine aktive Community haben möchten.</p>
+          <p>Die grundlegende Arena gibt dem Partner einen Raum, um Performance, Regeln, Rangfolge und den Wert der Community in einer Umgebung zu zeigen.</p>
+          <p>Die Partner-Monetarisierungsebene ist ein separater Schritt für diejenigen, die reale Community-Aktivität nachweisen können und bereit sind, mit ARENIX auf einer höheren Ebene zu arbeiten.</p>
+        </section></article>
+    </div>
+    <footer class="footer">© ARENIX.app · Öffentliche Nutzungsbedingungen · Core Arena Terms</footer>
+  </main>
+  <script>
+    (function () {
+
+      const tocTarget = document.querySelector(".toc");
+      if (tocTarget && !tocTarget.id) {
+        tocTarget.id = "obsah";
+      }
+
+      const sectionHeadings = document.querySelectorAll(".content > .notice h2, .content > .section h2");
+      sectionHeadings.forEach(function (heading) {
+        if (!heading.querySelector(".section-toc-link")) {
+          const link = document.createElement("a");
+          link.href = "#obsah";
+          link.className = "section-toc-link";
+          link.setAttribute("aria-label", "Zurück zum Inhalt");
+          link.textContent = "↑ Inhalt";
+          heading.appendChild(link);
+        }
+      });
+
+      const blockedKeys = new Set(["c", "x", "s", "p", "u", "a"]);
+      document.addEventListener("copy", function (event) {
+        event.preventDefault();
+      });
+      document.addEventListener("cut", function (event) {
+        event.preventDefault();
+      });
+      document.addEventListener("selectstart", function (event) {
+        event.preventDefault();
+      });
+      document.addEventListener("dragstart", function (event) {
+        event.preventDefault();
+      });
+      document.addEventListener("keydown", function (event) {
+        const key = String(event.key || "").toLowerCase();
+        if ((event.ctrlKey || event.metaKey) && blockedKeys.has(key)) {
+          event.preventDefault();
+          return false;
+        }
+        if (event.key === "F12") {
+          event.preventDefault();
+          return false;
+        }
+      });
+      window.addEventListener("beforeprint", function () {
+        document.title = "Drucken ist nicht erlaubt";
+      });
+    })();
+  </script>
+</body>
+</html>
