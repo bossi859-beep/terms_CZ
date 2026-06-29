@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ARENIX.app | Veřejné podmínky používání</title>
+  <meta name="robots" content="noindex, nofollow" />
+  <style>
+    :root {
+      --bg-deep: #07150f;
+      --bg-green: #0d261a;
+      --panel: #fff8e7;
+      --panel-soft: #fbf0d2;
+      --gold: #d6ad55;
+      --gold-soft: #f1d58b;
+      --green: #0f7a4b;
+      --green-dark: #0b4a31;
+      --cream: #fff8e7;
+      --text: #1e1a13;
+      --muted: #6d624d;
+      --line: rgba(214, 173, 85, 0.35);
+      --shadow: rgba(0, 0, 0, 0.32);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(214, 173, 85, 0.19), transparent 34rem),
+        radial-gradient(circle at top right, rgba(15, 122, 75, 0.32), transparent 31rem),
+        linear-gradient(135deg, var(--bg-deep), var(--bg-green));
+      color: var(--text);
+      line-height: 1.72;
+      -webkit-user-select: none;
+      user-select: none;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+      background-size: 44px 44px;
+      mask-image: linear-gradient(to bottom, rgba(0,0,0,0.95), rgba(0,0,0,0.12));
+    }
+
+    .page {
+      width: min(1120px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 38px 0 72px;
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      border: 1px solid rgba(214, 173, 85, 0.46);
+      border-radius: 30px;
+      background:
+        linear-gradient(135deg, rgba(255, 248, 231, 0.98), rgba(250, 236, 197, 0.96)),
+        var(--cream);
+      box-shadow: 0 30px 80px var(--shadow);
+      padding: clamp(26px, 5vw, 58px);
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: 420px;
+      height: 420px;
+      border-radius: 50%;
+      right: -170px;
+      top: -180px;
+      background: radial-gradient(circle, rgba(214,173,85,0.45), rgba(15,122,75,0.06), transparent 70%);
+    }
+
+    .brand-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      position: relative;
+      z-index: 1;
+      margin-bottom: 32px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .mark {
+      width: 48px;
+      height: 48px;
+      border-radius: 15px;
+      background:
+        linear-gradient(135deg, var(--green), var(--green-dark));
+      border: 1px solid rgba(214, 173, 85, 0.7);
+      box-shadow: 0 10px 30px rgba(15, 122, 75, 0.25);
+      display: grid;
+      place-items: center;
+      color: var(--gold-soft);
+      font-weight: 900;
+      letter-spacing: -0.04em;
+      font-size: 21px;
+    }
+
+    .brand-text strong {
+      display: block;
+      font-size: 17px;
+      letter-spacing: 0.02em;
+      color: var(--green-dark);
+    }
+
+    .brand-text span {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 14px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      color: var(--green-dark);
+      background: rgba(255, 255, 255, 0.45);
+      font-size: 13px;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .badge-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: var(--green);
+      box-shadow: 0 0 0 5px rgba(15, 122, 75, 0.12);
+    }
+
+    h1 {
+      position: relative;
+      z-index: 1;
+      margin: 0;
+      font-size: clamp(38px, 7vw, 76px);
+      line-height: 0.95;
+      letter-spacing: -0.07em;
+      color: #102015;
+    }
+
+    .subtitle {
+      position: relative;
+      z-index: 1;
+      margin: 18px 0 0;
+      max-width: 760px;
+      font-size: clamp(17px, 2.2vw, 23px);
+      line-height: 1.5;
+      color: #3f382b;
+    }
+
+    .meta-grid {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-top: 34px;
+    }
+
+    .meta-card {
+      border: 1px solid rgba(214, 173, 85, 0.35);
+      background: rgba(255, 255, 255, 0.42);
+      border-radius: 18px;
+      padding: 16px;
+    }
+
+    .meta-card span {
+      display: block;
+      color: var(--muted);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.09em;
+      font-weight: 800;
+      margin-bottom: 5px;
+    }
+
+    .meta-card strong {
+      color: #211c13;
+      font-size: 14px;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 24px;
+      align-items: start;
+      margin-top: 26px;
+    }
+
+    .toc {
+      position: sticky;
+      top: 20px;
+      border-radius: 24px;
+      background: rgba(255, 248, 231, 0.94);
+      border: 1px solid rgba(214, 173, 85, 0.36);
+      box-shadow: 0 18px 45px rgba(0, 0, 0, 0.18);
+      padding: 20px;
+      max-height: calc(100vh - 40px);
+      overflow: auto;
+    }
+
+    .toc h2 {
+      margin: 0 0 12px;
+      color: var(--green-dark);
+      font-size: 15px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .toc a {
+      display: block;
+      color: #473e2e;
+      text-decoration: none;
+      font-size: 13px;
+      padding: 8px 0;
+      border-bottom: 1px solid rgba(214, 173, 85, 0.18);
+    }
+
+    .toc a:hover {
+      color: var(--green);
+    }
+
+    .content {
+      min-width: 0;
+    }
+
+    .notice {
+      border-radius: 24px;
+      background:
+        linear-gradient(135deg, rgba(15, 122, 75, 0.12), rgba(214, 173, 85, 0.18)),
+        var(--panel);
+      border: 1px solid rgba(214, 173, 85, 0.44);
+      box-shadow: 0 18px 45px rgba(0, 0, 0, 0.16);
+      padding: clamp(22px, 4vw, 34px);
+      margin-bottom: 20px;
+    }
+
+    .notice h2 {
+      margin-top: 0;
+      color: var(--green-dark);
+      font-size: 25px;
+    }
+
+    .section {
+      border-radius: 24px;
+      background: rgba(255, 248, 231, 0.96);
+      border: 1px solid rgba(214, 173, 85, 0.32);
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.15);
+      padding: clamp(22px, 4vw, 34px);
+      margin-bottom: 18px;
+    }
+
+    .section h2 {
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+      margin: 0 0 18px;
+      color: #102015;
+      font-size: clamp(23px, 3vw, 34px);
+      line-height: 1.15;
+      letter-spacing: -0.03em;
+    }
+
+    .section h2 .num {
+      flex: 0 0 auto;
+      min-width: 38px;
+      height: 38px;
+      border-radius: 12px;
+      display: inline-grid;
+      place-items: center;
+      background: linear-gradient(135deg, var(--green), var(--green-dark));
+      color: var(--gold-soft);
+      font-size: 16px;
+      letter-spacing: 0;
+    }
+
+    p {
+      margin: 0 0 14px;
+      font-size: 16px;
+    }
+
+    strong {
+      color: #0d3d29;
+    }
+
+    ul {
+      margin: 10px 0 18px;
+      padding-left: 20px;
+    }
+
+    li {
+      margin: 7px 0;
+    }
+
+    .rule {
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(214,173,85,0.55), transparent);
+      margin: 24px 0;
+    }
+
+    .footer {
+      color: rgba(255, 248, 231, 0.78);
+      text-align: center;
+      margin-top: 34px;
+      font-size: 13px;
+    }
+
+    .watermark {
+      position: fixed;
+      right: 18px;
+      bottom: 14px;
+      color: rgba(255, 248, 231, 0.5);
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      pointer-events: none;
+      z-index: 50;
+    }
+
+    @media (max-width: 900px) {
+      .layout {
+        grid-template-columns: 1fr;
+      }
+
+      .toc {
+        position: relative;
+        top: 0;
+        max-height: none;
+      }
+
+      .meta-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .brand-row {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+
+    @media print {
+      body * {
+        visibility: hidden !important;
+      }
+
+      body::after {
+        content: "Tisk této stránky není povolen.";
+        visibility: visible !important;
+        display: block;
+        color: #111;
+        font-size: 22px;
+        padding: 40px;
+      }
+    }
+  </style>
+</head>
+<body oncontextmenu="return false">
+  <div class="watermark">ARENIX.app · Protected Terms View</div>
+
+  <main class="page">
+    <header class="hero">
+      <div class="brand-row">
+        <div class="brand">
+          <div class="mark">A</div>
+          <div class="brand-text">
+            <strong>ARENIX.app</strong>
+            <span>Core Arena Terms</span>
+          </div>
+        </div>
+        <div class="badge"><span class="badge-dot"></span>Veřejné podmínky používání</div>
+      </div>
+
+      <h1>Core Arena Terms</h1>
+      <p class="subtitle">Veřejné podmínky používání platformy ARENIX.app pro partnery, tvůrce, lídry komunit a jejich členy.</p>
+
+      <div class="meta-grid">
+        <div class="meta-card">
+          <span>Datum účinnosti</span>
+          <strong>03. MAY 2026</strong>
+        </div>
+        <div class="meta-card">
+          <span>Poskytovatel software</span>
+          <strong>AKO SOLUTIONS LLC, TRADE LICENCE 887171, DUBAI, SAE</strong>
+        </div>
+        <div class="meta-card">
+          <span>Webová stránka</span>
+          <strong>arenix.app a její podstránky</strong>
+        </div>
+      </div>
+    </header>
+
+    <div class="layout">
+      <aside class="toc" aria-label="Obsah">
+        <h2>Obsah</h2>
+        <a href="#tldr">Quick TL;DR</a>
+        <a href="#s1">1. Úvodní ustanovení</a>
+        <a href="#s2">2. Co je ARENIX</a>
+        <a href="#s3">3. Aréna jako hlavní produktový prvek</a>
+        <a href="#s4">4. Arena Credits</a>
+        <a href="#s5">5. Klíč Arény</a>
+        <a href="#s6">6. Co získává Partner</a>
+        <a href="#s7">7. Partnerská monetizační vrstva</a>
+        <a href="#s8">8. Partnerova komunita</a>
+        <a href="#s9">9. Zakázané použití Arény</a>
+        <a href="#s10">10. Žádné investiční služby</a>
+        <a href="#s11">11. Tržní data a výkonnostní zobrazení</a>
+        <a href="#s12">12. Compliance a ověřování</a>
+        <a href="#s13">13. Odpovědnost Partnera</a>
+        <a href="#s14">14. Odpovědnost uživatele</a>
+        <a href="#s15">15. Duševní vlastnictví a know-how</a>
+        <a href="#s16">16. Dostupnost platformy</a>
+        <a href="#s17">17. Třetí strany</a>
+        <a href="#s18">18. Omezení odpovědnosti</a>
+        <a href="#s19">19. Pozastavení nebo ukončení přístupu</a>
+        <a href="#s20">20. Zvláštní partnerské podmínky</a>
+        <a href="#s21">21. Změny podmínek</a>
+        <a href="#s22">22. Rozhodné právo a řešení sporů</a>
+        <a href="#s23">23. Kontakt</a>
+        <a href="#s24">24. Závěrečné prohlášení</a>
+      </aside>
+
+      <article class="content">
+        <section class="notice" id="tldr">
+          <h2>QUICK TL;DR – přečtěte si za 30 sekund</h2>
+          <p><strong>ARENIX.app</strong> je technologická infrastruktura pro partnery, tvůrce a lídry komunit, kteří chtějí proměnit pasivní publikum na aktivní a měřitelnou komunitu.</p>
+          <p>Partner vytváří vlastní Arénu, zve své lidi, nastavuje pravidla, sleduje aktivitu, pořadí a výkon komunity v jednom profesionálním prostředí.</p>
+          <p>Podstata Arény je v pravidlech. Partner může nastavit model, ve kterém se úspěch v Aréně neztrácí bez výsledku, ale podle předem určeného klíče se promítá zpět k nejlépe umístěné části komunity – například k Top 40 % leaderboardu.</p>
+          <p>V základní veřejné vrstvě se tento model zobrazuje výlučně přes Arena Credits. Arena Credits jsou interní prvek platformy, nemají peněžní hodnotu, nejsou vyplatitelné a nesmí být používány jako peníze nebo náhrada peněz.</p>
+          <p>Partnerská monetizační vrstva je samostatný a limitovaný krok pro schválené Partnery, kteří prokážou reálnou aktivitu, disciplínu a obchodní potenciál své komunity. Není automatickou součástí veřejné platformy a řídí se zvláštními podmínkami.</p>
+        </section>
+
+        <section class="section" id="s1">
+          <h2><span class="num">1</span>Úvodní ustanovení</h2>
+          <p>Tyto Veřejné podmínky používání upravují přístup a používání platformy <strong>ARENIX.app</strong>.</p>
+          <p>Platforma je určena pro partnery, tvůrce, mentory, edukátory, community lídry a jejich členy, kteří chtějí pracovat s komunitou přes digitální Arény, leaderboard, interní kredity, pravidla a výkonnostní zobrazení.</p>
+          <p>Používáním platformy uživatel potvrzuje, že si tyto podmínky přečetl, rozumí jim a souhlasí s nimi.</p>
+          <p>Pokud uživatel s těmito podmínkami nesouhlasí, nesmí platformu používat.</p>
+        </section>
+
+        <section class="section" id="s2">
+          <h2><span class="num">2</span>Co je ARENIX</h2>
+          <p><strong>ARENIX.app</strong> je softwarová platforma pro vytváření a správu digitálních Arén.</p>
+          <p>Aréna je online prostředí, ve kterém Partner organizuje aktivitu své komunity, nastavuje pravidla, sleduje výkon jednotlivých členů a pracuje s interními prvky platformy.</p>
+          <p>ARENIX umožňuje zejména:</p>
+          <ul>
+            <li>vytvořit vlastní Arénu;</li>
+            <li>pozvat členy vlastní komunity;</li>
+            <li>nastavit základní pravidla Arény;</li>
+            <li>používat Arena Credits;</li>
+            <li>zobrazovat leaderboard;</li>
+            <li>porovnávat výkonnost členů;</li>
+            <li>sledovat aktivitu komunity;</li>
+            <li>budovat důvěru přes transparentní pravidla;</li>
+            <li>požádat o přístup k vyšší partnerské vrstvě.</li>
+          </ul>
+          <p>ARENIX je technologické řešení.</p>
+          <p>ARENIX není broker, burza, investiční platforma, správce majetku, platební instituce, kasino, gambling operátor ani poskytovatel investičního nebo finančního poradenství.</p>
+        </section>
+
+        <section class="section" id="s3">
+          <h2><span class="num">3</span>Aréna jako hlavní produktový prvek</h2>
+          <p>Aréna je základní prostor platformy.</p>
+          <p>Partner přes Arénu vytváří místo, kde jeho komunita vidí pravidla, pořadí, výkon, aktivitu a výsledky v jednom přehledném prostředí.</p>
+          <p>Aréna může pracovat s tržními daty, cenovým vývojem, rozhodnutími uživatelů, interními kredity, výkonnostním skóre a leaderboardem.</p>
+          <p>Cílem Arény je ukázat Partnerovi i jeho komunitě, jak vypadá organizovaný model, ve kterém komunita není pouze pasivním publikem, ale aktivním prostředím s jasnými pravidly, měřitelným výkonem a viditelnou hodnotou.</p>
+        </section>
+
+        <section class="section" id="s4">
+          <h2><span class="num">4</span>Arena Credits</h2>
+          <p><strong>Arena Credits</strong> jsou interní prvek platformy. Používají se pro zobrazení aktivity, skóre, pořadí a výkonnostního modelu v Aréně.</p>
+          <p>Arena Credits pomáhají Partnerovi a jeho komunitě pochopit mechaniku Arény bez toho, aby v základní veřejné vrstvě vznikal nárok na výplatu nebo finanční plnění.</p>
+          <p>Arena Credits:</p>
+          <ul>
+            <li>nemají peněžní hodnotu;</li>
+            <li>nejsou peníze;</li>
+            <li>nejsou elektronické peníze;</li>
+            <li>nejsou kryptoměna;</li>
+            <li>nejsou stablecoin;</li>
+            <li>nejsou cenný papír;</li>
+            <li>nejsou finanční nástroj;</li>
+            <li>nejsou vklad;</li>
+            <li>nejsou vyplatitelné;</li>
+            <li>nejsou převoditelné mimo platformu;</li>
+            <li>nezakládají nárok na zisk, výnos, odměnu, výplatu nebo investiční návratnost.</li>
+          </ul>
+          <p>Žádný uživatel nemá právo požadovat vyplacení, směnu, refundaci nebo jinou kompenzaci na základě Arena Credits.</p>
+        </section>
+
+        <section class="section" id="s5">
+          <h2><span class="num">5</span>Klíč Arény</h2>
+          <p>Každá Aréna může mít vlastní klíč pravidel.</p>
+          <p>Tento klíč určuje, jak se v Aréně zobrazují výsledky, pořadí, výkon a přiřazení Arena Credits.</p>
+          <p>Partner může nastavit pravidla tak, aby se Arena Credits přiřazovaly podle leaderboardu, výkonnostního skóre, aktivity nebo jiných parametrů dostupných v platformě.</p>
+          <p>Příkladem takového pravidla může být model, podle kterého nejlépe umístěná část leaderboardu, například Top 40 %, získá v rámci Arény zpět nebo dodatečně získá Arena Credits podle předem určeného klíče.</p>
+          <p>Klíč Arény je důvod, proč Aréna není pouze tabulka výsledků.</p>
+          <p>Účastníci vidí, že pravidla mají důsledek, pořadí má význam a aktivita v komunitě se promítá do viditelného výsledku.</p>
+          <p>Partner tak umí své komunitě ukázat model, ve kterém výkon, disciplína a účast nejsou pouze prázdná čísla, ale vytvářejí strukturovaný komunitní mechanismus.</p>
+          <p>Klíč Arény se v základní veřejné vrstvě vztahuje výlučně na Arena Credits.</p>
+          <p>Arena Credits nemají peněžní hodnotu a nezakládají žádný nárok na peníze, výplatu, zisk, výnos, odměnu, profit share, investiční návratnost nebo jinou majetkovou hodnotu.</p>
+          <p>Jakékoli použití Arena Credits jako náhrady peněz, zástupné měny nebo podkladu pro finanční vypořádání mimo platformu je zakázáno.</p>
+        </section>
+
+        <section class="section" id="s6">
+          <h2><span class="num">6</span>Co získává Partner</h2>
+          <p>Partner získává nástroj, přes který může svou komunitu organizovat, aktivovat a měřit.</p>
+          <p>ARENIX umožňuje Partnerovi vytvořit profesionální prostředí bez toho, aby musel sám budovat vlastní technickou infrastrukturu, leaderboard, kreditový model, pravidla Arény a uživatelské rozhraní.</p>
+          <p>Partner může používat Arénu zejména jako:</p>
+          <ul>
+            <li>vstupní bod pro nové členy komunity;</li>
+            <li>nástroj pro aktivaci existující komunity;</li>
+            <li>důkaz zájmu a aktivity publika;</li>
+            <li>způsob, jak ukázat komunitní model v praxi;</li>
+            <li>podklad pro posouzení, zda má komunita potenciál pro partnerskou monetizační vrstvu.</li>
+          </ul>
+          <p>Partner, který umí přivést lidi, udržet jejich pozornost a vytvořit aktivitu, získává přes ARENIX infrastrukturu, která mu umožňuje ukázat hodnotu jeho komunity v číslech, ne pouze ve slovech.</p>
+          <p>Aréna dává Partnerovi jasný obraz o tom, zda jeho komunita pouze pasivně sleduje obsah, nebo je připravena aktivně reagovat, zapojovat se a fungovat podle pravidel.</p>
+          <p>Právě tento rozdíl je rozhodující. Komunita, která umí vytvořit aktivitu, disciplínu a měřitelný výkon, může být připravena na další úroveň spolupráce s ARENIX.</p>
+        </section>
+
+        <section class="section" id="s7">
+          <h2><span class="num">7</span>Partnerská monetizační vrstva</h2>
+          <p>ARENIX může pro vybrané Partnery poskytovat také <strong>partnerskou monetizační vrstvu</strong>.</p>
+          <p>Tato vrstva není součástí základní veřejné služby a není automaticky dostupná každému uživateli ani každému Partnerovi.</p>
+          <p>Přístup k partnerské monetizační vrstvě může být podmíněn zejména:</p>
+          <ul>
+            <li>individuálním schválením;</li>
+            <li>samostatnou partnerskou dohodou;</li>
+            <li>technickým nastavením;</li>
+            <li>interním posouzením;</li>
+            <li>compliance procesem;</li>
+            <li>splněním obchodních, právních nebo bezpečnostních požadavků určených Poskytovatelem.</li>
+          </ul>
+          <p>Žádné ustanovení těchto veřejných podmínek nelze vykládat tak, že Partnerovi nebo uživateli vzniká právní nárok na přístup k partnerské monetizační vrstvě.</p>
+          <p>Poskytovatel si vyhrazuje právo rozhodnout:</p>
+          <ul>
+            <li>kterému Partnerovi bude partnerská monetizační vrstva zpřístupněna;</li>
+            <li>v jakém rozsahu bude zpřístupněna;</li>
+            <li>za jakých podmínek bude zpřístupněna;</li>
+            <li>kdy bude zpřístupněna;</li>
+            <li>zda bude přístup pozastaven nebo ukončen.</li>
+          </ul>
+          <p>Základní Aréna ukazuje potenciál komunity.</p>
+          <p>Partnerská monetizační vrstva je další krok pro Partnery, kteří dokážou prokázat, že jejich komunita má aktivitu, důvěru, disciplínu a obchodní potenciál.</p>
+          <p>ARENIX tím odděluje běžné publikum od komunity, která je připravena pracovat na vyšší úrovni.</p>
+        </section>
+
+        <section class="section" id="s8">
+          <h2><span class="num">8</span>Partnerova komunita</h2>
+          <p>ARENIX je navržen tak, aby Partner mohl pracovat se svou vlastní komunitou.</p>
+          <p>Partner si buduje svůj vztah se svými členy. ARENIX poskytuje nástroj, rozhraní a infrastrukturu.</p>
+          <p>Poskytovatel automaticky nepřebírá Partnerovu databázi, neprodává ji, neobchoduje s ní a nepoužívá ji jako vlastní obchodní databázi, pokud není výslovně dohodnuto jinak nebo pokud to nevyžaduje zákon, bezpečnostní důvod, technické zabezpečení nebo compliance proces.</p>
+          <p>Partner je odpovědný za zákonnost svého vztahu s komunitou, za způsob zvaní členů, za vlastní marketingová tvrzení a za komunikaci mimo platformu.</p>
+        </section>
+
+        <section class="section" id="s9">
+          <h2><span class="num">9</span>Zakázané použití Arény</h2>
+          <p>Partner ani uživatel nesmí používat ARENIX způsobem, který poškozuje integritu platformy nebo mění její základní veřejnou vrstvu na neoficiální finanční mechanismus mimo platformu.</p>
+          <p>Zakázáno je zejména:</p>
+          <ul>
+            <li>používat Arena Credits jako peníze nebo zástupnou měnu;</li>
+            <li>slibovat výplaty na základě Arena Credits;</li>
+            <li>vyplácet odměny mimo platformu na základě leaderboardu;</li>
+            <li>vytvářet neoficiální finanční pooly mimo schválené prostředí;</li>
+            <li>prezentovat Arénu jako investiční příležitost;</li>
+            <li>slibovat zisk, výnos nebo garantovaný výsledek;</li>
+            <li>uvádět členy komunity v omyl o povaze platformy;</li>
+            <li>obcházet technická nebo právní omezení platformy;</li>
+            <li>kopírovat, napodobovat nebo neoprávněně využívat know-how platformy.</li>
+          </ul>
+          <p>Porušení této části může vést k okamžitému omezení nebo ukončení přístupu.</p>
+        </section>
+
+        <section class="section" id="s10">
+          <h2><span class="num">10</span>Žádné investiční služby</h2>
+          <p>ARENIX neposkytuje:</p>
+          <ul>
+            <li>investiční poradenství;</li>
+            <li>finanční poradenství;</li>
+            <li>brokerské služby;</li>
+            <li>správu majetku;</li>
+            <li>správu portfolia;</li>
+            <li>custody služby;</li>
+            <li>bankovní služby;</li>
+            <li>platební účty;</li>
+            <li>burzovní služby;</li>
+            <li>garanci zisku;</li>
+            <li>výnosové produkty;</li>
+            <li>kolektivní investování;</li>
+            <li>hazardní hry nebo kasinové služby.</li>
+          </ul>
+          <p>Uživatel nesmí interpretovat Arénu, leaderboard, Arena Credits nebo jakékoli výsledky v platformě jako investiční doporučení, finanční nabídku nebo garanci budoucího výsledku.</p>
+        </section>
+
+        <section class="section" id="s11">
+          <h2><span class="num">11</span>Tržní data a výkonnostní zobrazení</h2>
+          <p>Platforma může zobrazovat tržní data, cenový vývoj, výkonnostní metriky nebo jiné údaje relevantní pro fungování Arény.</p>
+          <p>Tyto údaje slouží pro fungování uživatelského prostředí, porovnání rozhodnutí a zobrazení výsledků podle pravidel Arény.</p>
+          <p>Poskytovatel negarantuje úplnost, přesnost, nepřetržitou dostupnost nebo vhodnost tržních dat pro konkrétní účel.</p>
+          <p>Žádné zobrazení dat v platformě nepředstavuje doporučení koupit, prodat, držet nebo obchodovat jakýkoli finanční nástroj, kryptoměnu, token, CFD, derivát nebo jiné aktivum.</p>
+        </section>
+
+        <section class="section" id="s12">
+          <h2><span class="num">12</span>Compliance a ověřování</h2>
+          <p>Poskytovatel si vyhrazuje právo vyžadovat ověření uživatele, Partnera, organizace, věku, technického přístupu, peněženky, lokality nebo jiných údajů, pokud je to potřebné pro ochranu platformy, splnění právních povinností, bezpečnostní posouzení nebo zpřístupnění partnerské monetizační vrstvy.</p>
+          <p>Ověření může být provedeno přímo nebo prostřednictvím třetí strany.</p>
+          <p>Skutečnost, že uživatel může používat základní veřejnou vrstvu bez dodatečného ověření, neznamená, že takové ověření nebude potřebné u jiných funkcí nebo v budoucnu.</p>
+        </section>
+
+        <section class="section" id="s13">
+          <h2><span class="num">13</span>Odpovědnost Partnera</h2>
+          <p>Partner odpovídá za to, že jeho používání platformy je zákonné, korektní a nezavádějící.</p>
+          <p>Partner nesmí vůči své komunitě tvrdit nebo naznačovat, že:</p>
+          <ul>
+            <li>ARENIX garantuje výplatu;</li>
+            <li>Arena Credits mají peněžní hodnotu;</li>
+            <li>výsledek v Aréně je garantovaný;</li>
+            <li>platforma poskytuje investiční službu;</li>
+            <li>účast v Aréně je finanční produkt;</li>
+            <li>Poskytovatel spravuje nebo drží prostředky uživatelů;</li>
+            <li>Partner má právo obcházet tyto podmínky přes vlastní dohody mimo platformu.</li>
+          </ul>
+          <p>Partner odpovídá za vlastní reklamu, vlastní komunikační kanály, vlastní sliby a vlastní vztahy se svou komunitou.</p>
+        </section>
+
+        <section class="section" id="s14">
+          <h2><span class="num">14</span>Odpovědnost uživatele</h2>
+          <p>Uživatel odpovídá za to, že platformu používá zákonně, bezpečně a v souladu s těmito podmínkami.</p>
+          <p>Uživatel nesmí:</p>
+          <ul>
+            <li>zneužívat platformu;</li>
+            <li>manipulovat leaderboard;</li>
+            <li>vytvářet falešné účty;</li>
+            <li>používat automatizované nástroje bez souhlasu;</li>
+            <li>poškozovat platformu;</li>
+            <li>obcházet pravidla Arény;</li>
+            <li>uvádět jiné uživatele v omyl;</li>
+            <li>používat platformu k podvodu, manipulaci nebo nezákonné činnosti.</li>
+          </ul>
+        </section>
+
+        <section class="section" id="s15">
+          <h2><span class="num">15</span>Duševní vlastnictví a know-how</h2>
+          <p>Platforma, její název, design, struktura, rozhraní, logika Arény, leaderboard, kreditový model, pravidla, software, dokumentace, obchodní model, technická řešení a související know-how jsou chráněny právy Poskytovatele nebo jeho licencorů.</p>
+          <p>Uživatel ani Partner nesmí bez předchozího písemného souhlasu Poskytovatele:</p>
+          <ul>
+            <li>kopírovat platformu;</li>
+            <li>napodobovat její obchodní nebo technický model;</li>
+            <li>zpětně analyzovat její logiku;</li>
+            <li>vytvářet odvozené produkty;</li>
+            <li>prodávat nebo licencovat přístup třetím osobám;</li>
+            <li>používat platformu k vytvoření konkurenčního řešení;</li>
+            <li>zneužít získané informace mimo účel, pro který mu byl přístup udělen.</li>
+          </ul>
+        </section>
+
+        <section class="section" id="s16">
+          <h2><span class="num">16</span>Dostupnost platformy</h2>
+          <p>Poskytovatel se snaží zajistit řádné fungování platformy, ale negarantuje její nepřetržitou dostupnost.</p>
+          <p>Platforma může být dočasně nedostupná z důvodu údržby, aktualizace, technické chyby, bezpečnostního incidentu, výpadku třetí strany nebo jiné okolnosti.</p>
+          <p>Poskytovatel může platformu nebo její části upravit, rozšířit, omezit, pozastavit nebo ukončit.</p>
+        </section>
+
+        <section class="section" id="s17">
+          <h2><span class="num">17</span>Třetí strany</h2>
+          <p>Platforma může využívat služby třetích stran, například hosting, analytiku, datové zdroje, bezpečnostní nástroje, compliance nástroje, komunikační nástroje nebo jiné technické služby.</p>
+          <p>Poskytovatel neodpovídá za výpadky, chyby, omezení nebo škody způsobené službami třetích stran, pokud kogentní právní předpisy nestanoví jinak.</p>
+        </section>
+
+        <section class="section" id="s18">
+          <h2><span class="num">18</span>Omezení odpovědnosti</h2>
+          <p>V maximálním rozsahu povoleném příslušným právem Poskytovatel neodpovídá za nepřímou škodu, ušlý zisk, ztrátu obchodní příležitosti, ztrátu dat, poškození reputace, výpadek služby, nesprávné použití platformy, jednání Partnera nebo používání platformy v rozporu s těmito podmínkami.</p>
+          <p>Nic v těchto podmínkách nevylučuje odpovědnost, kterou není možné podle příslušného práva vyloučit.</p>
+        </section>
+
+        <section class="section" id="s19">
+          <h2><span class="num">19</span>Pozastavení nebo ukončení přístupu</h2>
+          <p>Poskytovatel může omezit, pozastavit nebo ukončit přístup uživatele nebo Partnera, pokud dojde k porušení těchto podmínek nebo pokud Poskytovatel důvodně vyhodnotí právní, technické, bezpečnostní, reputační nebo obchodní riziko.</p>
+          <p>To platí zejména při:</p>
+          <ul>
+            <li>zneužití Arena Credits;</li>
+            <li>zavádějící komunikaci vůči komunitě;</li>
+            <li>obcházení pravidel platformy;</li>
+            <li>neoprávněném kopírování know-how;</li>
+            <li>manipulaci výsledků;</li>
+            <li>používání platformy k neoficiálnímu finančnímu vypořádání;</li>
+            <li>jednání, které může poškodit Poskytovatele, platformu nebo ostatní uživatele.</li>
+          </ul>
+        </section>
+
+        <section class="section" id="s20">
+          <h2><span class="num">20</span>Zvláštní partnerské podmínky</h2>
+          <p>Některé funkce platformy mohou být dostupné pouze na základě zvláštních partnerských podmínek.</p>
+          <p>Tyto veřejné podmínky upravují základní používání ARENIX.app. Zvláštní partnerské podmínky mohou upravovat další práva, povinnosti, technické funkce, obchodní nastavení, compliance požadavky, ochranu důvěrných informací a další pravidla spolupráce mezi Poskytovatelem a Partnerem.</p>
+          <p>Pokud je mezi těmito veřejnými podmínkami a zvláštními partnerskými podmínkami rozpor, přednost mají zvláštní partnerské podmínky v rozsahu, v jakém se týkají konkrétní schválené partnerské funkcionality.</p>
+        </section>
+
+        <section class="section" id="s21">
+          <h2><span class="num">21</span>Změny podmínek</h2>
+          <p>Poskytovatel může tyto podmínky průběžně aktualizovat.</p>
+          <p>Aktualizované znění bude zveřejněno na platformě nebo oznámeno jiným přiměřeným způsobem.</p>
+          <p>Pokračování v používání platformy po zveřejnění nových podmínek znamená souhlas s aktualizovaným zněním.</p>
+          <p>Pokud uživatel s novým zněním nesouhlasí, musí přestat platformu používat.</p>
+        </section>
+
+        <section class="section" id="s22">
+          <h2><span class="num">22</span>Rozhodné právo a řešení sporů</h2>
+          <p>Rozhodné právo, příslušný soud nebo jiný způsob řešení sporů budou doplněny ve finální verzi těchto podmínek podle právní a obchodní struktury Poskytovatele.</p>
+        </section>
+
+        <section class="section" id="s23">
+          <h2><span class="num">23</span>Kontakt</h2>
+          <p>Kontaktní údaje pro právní oznámení, podporu a komunikaci s Poskytovatelem budou doplněny ve finální verzi.</p>
+        </section>
+
+        <section class="section" id="s24">
+          <h2><span class="num">24</span>Závěrečné prohlášení</h2>
+          <p>ARENIX je vytvořen pro Partnery, kteří nechtějí mít pouze publikum, ale aktivní komunitu.</p>
+          <p>Základní Aréna dává Partnerovi prostor ukázat výkon, pravidla, pořadí a hodnotu komunity v jednom prostředí.</p>
+          <p>Partnerská monetizační vrstva je samostatný krok pro ty, kteří dokážou prokázat reálnou komunitní aktivitu a jsou připraveni pracovat s ARENIX na vyšší úrovni.</p>
+        </section>
+      </article>
+    </div>
+
+    <footer class="footer">
+      © ARENIX.app · Veřejné podmínky používání · Core Arena Terms
+    </footer>
+  </main>
+
+  <script>
+    (function () {
+      const blockedKeys = new Set(["c", "x", "s", "p", "u", "a"]);
+      document.addEventListener("copy", function (event) {
+        event.preventDefault();
+      });
+      document.addEventListener("cut", function (event) {
+        event.preventDefault();
+      });
+      document.addEventListener("selectstart", function (event) {
+        event.preventDefault();
+      });
+      document.addEventListener("dragstart", function (event) {
+        event.preventDefault();
+      });
+      document.addEventListener("keydown", function (event) {
+        const key = String(event.key || "").toLowerCase();
+        if ((event.ctrlKey || event.metaKey) && blockedKeys.has(key)) {
+          event.preventDefault();
+          return false;
+        }
+        if (event.key === "F12") {
+          event.preventDefault();
+          return false;
+        }
+      });
+      window.addEventListener("beforeprint", function () {
+        document.title = "Tisk není povolen";
+      });
+    })();
+  </script>
+</body>
+</html>
